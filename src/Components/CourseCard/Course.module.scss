@@ -1,0 +1,22 @@
+.course_card {
+    width: 45%;
+    height: 462px;
+    border-radius: 35px;
+
+    .logo_wrap {
+        background-color: #fff;
+        width: 21%;
+        height: 116px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // margin: 59px 0 0 59px;
+
+        img {
+            // margin-top: 20px;
+            width: 70%;
+            height: 70%;
+        }
+    }
+}
