@@ -50,6 +50,9 @@ const CourseList = () => {
           <CourseCard key={i} {...el} />
         ))}
       </div>
+      <div className={s.btn}>
+        <button className={s.btn_request}>ОСТАВИТЬ ЗАЯВКУ</button>
+      </div>
     </section>
 
   );
