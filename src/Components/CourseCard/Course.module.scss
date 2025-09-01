@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
 .course_card {
     width: 45%;
     height: 462px;
     border-radius: 35px;
+    margin-bottom: 80px;
 
     .logo_wrap {
         background-color: #fff;
@@ -11,12 +14,43 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        // margin: 59px 0 0 59px;
+        margin: 59px 0 0 59px;
 
         img {
-            // margin-top: 20px;
             width: 70%;
             height: 70%;
+        }
+    }
+
+    h3 {
+        font-family: "Onest", sans-serif;
+        font-weight: 700;
+        font-style: bold;
+        font-size: 48px;
+        text-transform: capitalize;
+        vertical-align: middle;
+        color: #fff;
+        width: 70%;
+        margin: 22px 0 0 58px;
+    }
+
+    button {
+        width: 488px;
+        height: 85px;
+        border-radius: 52px;
+        border: 2px solid #fff;
+        background-color: transparent;
+        cursor: pointer;
+        font-family: "Onest", sans-serif;
+        font-size: 25px;
+        font-weight: 300;
+        vertical-align: middle;
+        color: #fff;
+        margin: 34px 0 0 55px;
+
+        &:hover {
+            background-color: #fff;
+            color: inherit;
         }
     }
 }
