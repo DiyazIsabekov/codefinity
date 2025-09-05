@@ -1,56 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 
 .course_card {
-    width: 45%;
-    height: 462px;
-    border-radius: 35px;
-    margin-bottom: 80px;
+  flex: 1 1 47%;
+  height: 462px;
+  border-radius: 35px;
+  padding: 55px 55px 33px;
+  //   margin-bottom: 80px;
 
-    .logo_wrap {
-        background-color: #fff;
-        width: 21%;
-        height: 116px;
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 59px 0 0 59px;
+  .logo_wrap {
+    background-color: #fff;
+    width: 20%;
+    height: 116px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        img {
-            width: 70%;
-            height: 70%;
-        }
+    img {
+      width: 70%;
+      height: 70%;
     }
+  }
 
-    h3 {
-        font-family: "Onest", sans-serif;
-        font-weight: 700;
-        font-style: bold;
-        font-size: 48px;
-        text-transform: capitalize;
-        vertical-align: middle;
-        color: #fff;
-        width: 70%;
-        margin: 22px 0 0 58px;
+  h3 {
+    font-family: "Onest", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    text-transform: capitalize;
+    color: #fff;
+    width: 71%;
+    margin-top: 22px;
+  }
+
+  &:nth-of-type(5) h3 {
+    width: 62%;
+  }
+
+  button {
+    width: 100%;
+    height: 85px;
+    border-radius: 52px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: "Onest", sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    color: #fff;
+    transition: 0.2s;
+    margin-top: 34px;
+
+    &:hover {
+      background-color: #fff;
+      color: inherit;
     }
-
-    button {
-        width: 488px;
-        height: 85px;
-        border-radius: 52px;
-        border: 2px solid #fff;
-        background-color: transparent;
-        cursor: pointer;
-        font-family: "Onest", sans-serif;
-        font-size: 25px;
-        font-weight: 300;
-        vertical-align: middle;
-        color: #fff;
-        margin: 34px 0 0 55px;
-
-        &:hover {
-            background-color: #fff;
-            color: inherit;
-        }
-    }
+  }
 }
