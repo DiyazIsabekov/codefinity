@@ -7,7 +7,7 @@ import sw_card_3 from '../../assets/images/sw_card_3.png'
 const StudentsWork = () => {
     return (
         <div className={s.students_work}>
-            <h2 className={s.students_work_title}>Работы Наших Учеников</h2>
+            <h2 className={s.students_work_title}>Работы наших учеников</h2>
             <div className={s.wrapper_students_work_cards}>
                 <div className={s.card_sw}>
                   <img src={sw_card_1} alt="sw_card_1" className={s.sw_picture}/>
