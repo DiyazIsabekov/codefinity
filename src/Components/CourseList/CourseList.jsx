@@ -1,12 +1,12 @@
 import React from "react";
 import devopsLogo from "../../assets/images/devops-2.svg";
-import BALogo from '../../assets/images/BA.png'
-import DALogo from '../../assets/images/DA.png'
-import flutterLogo from '../../assets/images/flutter.png'
-import javaLogo from '../../assets/images/java.png'
-import javaScriptLogo from '../../assets/images/javascript 1.png'
+import BALogo from "../../assets/images/BA.png";
+import DALogo from "../../assets/images/DA.png";
+import flutterLogo from "../../assets/images/flutter.png";
+import javaLogo from "../../assets/images/java.png";
+import javaScriptLogo from "../../assets/images/javascript 1.png";
 import CourseCard from "../CourseCard/CourseCard";
-import s from './CourseList.module.scss'
+import s from "./CourseList.module.scss";
 
 const cardData = [
   {
@@ -50,8 +50,10 @@ const CourseList = () => {
           <CourseCard key={i} {...el} />
         ))}
       </div>
+      <div className={s.btn}>
+        <button className={s.btn_request}>ОСТАВИТЬ ЗАЯВКУ</button>
+      </div>
     </section>
-
   );
 };
 

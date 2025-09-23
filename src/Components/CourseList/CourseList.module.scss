@@ -1,5 +1,36 @@
 .card_wrap {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+h2 {
+  font-family: "Onest", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 48px;
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 69px;
+  .btn_request {
+    border-radius: 35px;
+    cursor: pointer;
+    border: none;
+    background-color: #d71f2b;
+    font-family: "Onest", sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+    padding: 13px 30px;
+    color: #ffffff;
+    width: 26%;
+    height: 60px;
+  }
 }

@@ -3,11 +3,11 @@ import s from './Course.module.scss'
 
 const CourseCard = ({ title, color, imageLink }) => {
   return (
-    <div className={s.course_card} style={{ backgroundColor: color }}>
+    <div className={s.course_card} style={{ backgroundColor: color, color: color }}>
       <div className={s.logo_wrap}>
         <img src={imageLink} alt="" />
       </div>
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <button>Подробнее</button>
     </div>
   )
