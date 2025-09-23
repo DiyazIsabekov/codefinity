@@ -1,10 +1,14 @@
 import React from "react";
 import CourseList from "../../Components/CourseList/CourseList";
+import Hero from "../../Components/Hero/Hero";
+
+
+
 
 const Home = () => {
   return (
     <div>
-      Home
+      <Hero />
       <CourseList />
     </div>
   );
