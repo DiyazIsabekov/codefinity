@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+.students_work_title{
+    margin-top: 65px;
+}
+
+.wrapper_students_work_cards{
+    display: flex;
+    justify-content: space-between;
+
+    .card_sw {
+     width: 30%;
+     display: flex;
+     flex-direction: column;
+     
+
+     .sw_picture{
+        height: 384px;
+        border-radius: 40px;        
+      }
+
+      .card_text{
+         font-family: Inter, sans-serif;
+         font-size: 22px;
+         font-weight: 700;
+         font-style: bold;
+         color: #000000;
+         margin-top: 15px;
+      }
+
+    }
+}
