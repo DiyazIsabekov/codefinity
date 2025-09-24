@@ -8,14 +8,13 @@ const Header = () => {
       <img src={logo} className={s.logo} alt="logo" />
       <nav>
         <ul className={s.menu}>
-          <li><a href="" className={s.menu_items}>ГЛАВНАЯ</a></li>
           <li><a href="" className={s.menu_items}>КУРСЫ</a></li>
-          <li><a href="" className={s.menu_items}>ОТЗЫВЫ</a></li>
           <li><a href="" className={s.menu_items}>ПРОЕКТЫ СТУДЕНТОВ</a></li>
-          <li><a href="" className={s.menu_items}>КОНТАКТЫ</a></li>
+          <li><a href="" className={s.menu_items}>ПАРТНЕРЫ</a></li>
+          <li><a href="" className={s.menu_items}>ОТЗЫВЫ</a></li>
+          <li><a href="" className={s.menu_items}>RU</a></li>
         </ul>
       </nav>
-
     </div>
   </header>;
 };
