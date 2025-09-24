@@ -8,7 +8,7 @@
     font-weight: 300;
     font-family: "Onest", sans-serif;
     // border-bottom: 1px solid #D71F2B;
-    padding: 10px 0;
+    padding: 10px 20px;
 }
 
 
@@ -25,17 +25,18 @@ nav {
 }
 
 .menu_items {
+    display: inline-block;
     text-decoration: none;
     color: #434343;
     font-weight: 400;
     font-size: 18px;
-    transition: background-color 0.3s ease, border-radius 0.3s ease;
-    padding: 5px;
+    transition: all 0.3s ease;
+    border-radius: 35px;
+    padding: 10px 20px;
 
     &:hover {
-        border-radius: 10%;
-        background-color: #fcaca3;
-        padding: 5px 5px;
+        background: linear-gradient(to right, #A91525, #F46E08);
+        color: white;
     }
 }
 
