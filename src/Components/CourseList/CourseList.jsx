@@ -13,31 +13,37 @@ const cardData = [
     title: "DevOps разработчик",
     imageLink: devopsLogo,
     color: "#6294FF",
+    url: '/courses/dev-ops'
   },
   {
     title: "Business Analytics Разработчик",
     imageLink: BALogo,
     color: "#E44A59",
+    url: '/courses/business-analyst'
   },
   {
     title: "Data Analytics Разработчик",
     imageLink: DALogo,
     color: "#273DA4",
+    url: '/courses/data-analytics'
   },
   {
     title: "Flutter Разработчик",
     imageLink: flutterLogo,
     color: "#58C87C",
+    url: '/courses/flutter'
   },
   {
     title: "Java Разработчик",
     imageLink: javaLogo,
     color: "#41B3E5",
+    url: '/courses/java'
   },
   {
     title: "JavaScript Разработчик",
     imageLink: javaScriptLogo,
     color: "#F5B762",
+    url: '/courses/javascript'
   },
 ];
 

@@ -1,8 +1,13 @@
 import React from "react";
-import s from "./DevOps.module.scss";
+import styles from "./DevOps.module.scss";
+import HeroDetails from "../../Components/HeroDetails/HeroDetails";
 
 const DevOps = () => {
-  return <div className={s.title}>DevOps</div>;
+  return (
+    <div className={styles['dev-ops']}>
+      <HeroDetails />
+    </div>
+  )
 };
 
 export default DevOps;
