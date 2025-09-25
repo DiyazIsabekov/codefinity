@@ -1,7 +1,7 @@
 .hero {
     position: relative;
     overflow: visible;
-    // margin: 200px 0;
+    margin-bottom: 80px;
     height: 80vh;
 }
 
@@ -10,6 +10,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+
 }
 
 .title {
@@ -18,35 +19,39 @@
     width: 50%;
     gap: 100px;
     z-index: 2;
+
+    h1 {
+        font-size: 68px;
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif;
+        margin: 80px 0 180px 0;
+    }
 }
 
-h1 {
-    font-size: 60px;
-    font-weight: 700;
-    font-family: "Onest", sans-serif;
-    margin: 70px 0 180px 0;
-}
+
 
 .infoWrapper {
     display: flex;
     justify-content: space-between;
     gap: 20px;
     padding-bottom: 40px;
+
+    h3 {
+        font-size: 59.97px;
+        color: #595959;
+        font-family: "Onest", sans-serif;
+        font-weight: 700;
+    }
+
+    p {
+        font-family: "Onest", sans-serif;
+        font-size: 21.66px;
+        font-weight: 400;
+        color: #595959;
+    }
 }
 
-h3 {
-    font-size: 59.97px;
-    color: #595959;
-    font-family: "Onest", sans-serif;
-    font-weight: 700;
-}
 
-p {
-    font-family: "Onest", sans-serif;
-    font-size: 21.66px;
-    font-weight: 400;
-    color: #595959;
-}
 
 .request {
     border-radius: 35px;
@@ -74,13 +79,13 @@ p {
 .imageWrapper {
     position: absolute;
     right: -190px;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     z-index: -10;
-}
 
-.infinity {
-    width: 90vh;
-    max-width: 800px;
-    height: auto;
+    .infinity {
+        width: 90vh;
+        max-width: 800px;
+        height: auto;
+    }
 }
