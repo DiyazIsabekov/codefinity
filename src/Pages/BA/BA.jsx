@@ -9,9 +9,6 @@ const BA = () => {
   return (
     <div className={styles["business-analyst"]}>
       <HeroDetails />
-      <StudyProcess />
-      <Teachers />
-      <Consultation />
     </div>
   );
 };
