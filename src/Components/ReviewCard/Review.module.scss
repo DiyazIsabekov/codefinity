@@ -1,0 +1,31 @@
+.review_card {
+    background-color: #4169E8E5;
+    width: 30%;
+    height: 370px;
+    border-radius: 35px;
+
+    .logo_wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 18px;
+    }
+
+    .name {
+        font-family: "Onest", sans-serif;
+        font-family: 700;
+        font-size: 23px;
+        color: #fff;
+        margin: 32px 0 0 33px;
+    }
+
+    .review_text {
+        font-family: "Onest", sans-serif;
+        font-weight: 250;
+        font-size: 17px;
+        color: #fff;
+        text-align: center;
+        width: 84%;
+        margin-top: 23px;
+        margin-left: 32px;
+    }
+}

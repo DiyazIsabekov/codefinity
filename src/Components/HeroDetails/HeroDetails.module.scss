@@ -1,0 +1,379 @@
+.hero-detail {
+    height: 791px;
+    background-color: black;
+    padding: 216px 0 0 104px;
+    position: relative;
+    overflow: hidden;
+
+    &--business-analyst {
+        background: linear-gradient(225.71deg, #000000 62.75%, #F40808 115.11%);
+    }
+
+    &--dev-ops {
+        background: linear-gradient(229.93deg, #000000 51.72%, #2CA2FF 117.28%);
+    }
+
+    &--data-analytics {
+        background: linear-gradient(270deg, #273DA4 48.4%, #5F70BF 97.02%);
+    }
+
+    &--flutter {
+        background: linear-gradient(224.64deg, #000000 71.13%, #7CE529 110.76%);
+    }
+
+    &--java {
+        background: linear-gradient(231.46deg, #000000 75.6%, #21BBFF 109.05%);
+    }
+
+    &--javascript {
+        background: linear-gradient(217.03deg, #000000 78.75%, #F5B762 108.03%);
+    }
+
+    &__container {}
+
+    &__info {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        color: #FFFFFF;
+        font-size: 78px;
+        font-weight: 800;
+        line-height: 78px;
+        margin: 0 !important;
+        width: 902px;
+
+        &--dev-ops {
+            width: 520px;
+        }
+    }
+
+    &__description {
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        width: 460px;
+        margin-top: 13px;
+    }
+
+    &__results {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-top: 40px;
+
+        &-item {
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 28px;
+            width: 120px;
+            padding-left: 12px;
+            border-left: 1px solid #FFFFFF;
+        }
+    }
+
+    &__inner {
+        margin-top: 49px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__button {
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 28px;
+        background-color: inherit;
+        border: none;
+        padding: 24px 75px;
+        border-radius: 16px;
+        border: 1px solid #FFFFFF;
+    }
+
+    &__conditions {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 8px;
+
+        p {
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            padding: 4px 16px;
+            background-color: #FFFFFF26;
+            border-radius: 12px;
+        }
+    }
+
+    &__image {
+        width: 100px;
+
+        &--business-analyst {
+            &-first {
+                width: 720px;
+                position: absolute;
+                top: -20px;
+                right: 0;
+                z-index: 2;
+            }
+
+            &-second {
+                width: 400px;
+                position: absolute;
+                top: 400px;
+                right: 360px;
+                z-index: 1;
+            }
+
+            &-third {
+                width: 180px;
+                position: absolute;
+                top: 0;
+                right: 280px;
+                z-index: 1;
+            }
+        }
+
+        &--dev-ops {
+            &-first {
+                width: 1000px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 2;
+            }
+
+            &-second {
+                width: 300px;
+                position: absolute;
+                top: 360px;
+                right: 400px;
+                z-index: 1;
+            }
+
+            &-third {
+                width: 400px;
+                position: absolute;
+                top: 30px;
+                right: 230px;
+                z-index: 1;
+            }
+
+            &-fourth {
+                width: 300px;
+                position: absolute;
+                top: 40px;
+                right: 0;
+                z-index: 1;
+            }
+        }
+
+        &--data-analytics {
+            &-first {
+                width: 1000px;
+                position: absolute;
+                top: -30px;
+                right: 0;
+                z-index: 2;
+            }
+
+            &-second {
+                width: 300px;
+                position: absolute;
+                top: 400px;
+                right: 450px;
+                z-index: 1;
+            }
+
+            &-third {
+                width: 250px;
+                position: absolute;
+                top: 100px;
+                right: 320px;
+                z-index: 1;
+            }
+
+            &-fourth {
+                width: 320px;
+                position: absolute;
+                top: -30px;
+                right: 0;
+                z-index: 1;
+            }
+        }
+
+        &--flutter {
+            &-first {
+                width: 980px;
+                position: absolute;
+                top: -60px;
+                right: 0;
+                z-index: 2;
+            }
+
+            &-second {
+                width: 300px;
+                position: absolute;
+                top: 300px;
+                right: 440px;
+                z-index: 3;
+            }
+
+            &-third {
+                width: 300px;
+                position: absolute;
+                top: 80px;
+                right: 270px;
+                z-index: 1;
+            }
+
+            &-fourth {
+                width: 160px;
+                position: absolute;
+                top: 25px;
+                right: 0;
+                z-index: 1;
+            }
+        }
+
+        &--java {
+            &-first {
+                width: 980px;
+                position: absolute;
+                top: -30px;
+                right: 0;
+                z-index: 2;
+            }
+
+            &-second {
+                width: 200px;
+                position: absolute;
+                top: 420px;
+                right: 540px;
+                z-index: 3;
+            }
+
+            &-third {
+                width: 400px;
+                position: absolute;
+                top: 270px;
+                right: 220px;
+                z-index: 1;
+            }
+
+            &-fourth {
+                width: 440px;
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                z-index: 1;
+            }
+        }
+
+        &--javascript {
+            &-first {
+                width: 980px;
+                position: absolute;
+                top: -20px;
+                right: 0;
+                z-index: 2;
+            }
+
+            &-second {
+                width: 460px;
+                position: absolute;
+                top: 240px;
+                right: 240px;
+                z-index: 1;
+            }
+
+            &-third {
+                width: 300px;
+                position: absolute;
+                top: 10px;
+                right: 220px;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__circle {
+        &--business-analyst {
+            width: 615.1px;
+            height: 600.06px;
+            background: #A91525;
+            filter: blur(100px);
+            border-radius: 50%;
+            position: absolute;
+            right: -20px;
+            top: 120px;
+            z-index: 0;
+        }
+
+        &--dev-ops {
+            width: 615.1px;
+            height: 600.06px;
+            background: #2CA2FF;
+            filter: blur(100px);
+            border-radius: 50%;
+            position: absolute;
+            right: -20px;
+            top: 120px;
+            z-index: 0;
+        }
+
+        &--data-analytics {
+            width: 615.1px;
+            height: 600.06px;
+            background: #000000;
+            filter: blur(100px);
+            border-radius: 50%;
+            position: absolute;
+            right: -20px;
+            top: 120px;
+            z-index: 0;
+        }
+
+        &--flutter {
+            width: 615.1px;
+            height: 600.06px;
+            background: #7CE529;
+            filter: blur(100px);
+            border-radius: 50%;
+            position: absolute;
+            right: -20px;
+            top: 120px;
+            z-index: 0;
+        }
+
+        &--java {
+            width: 615.1px;
+            height: 600.06px;
+            background: #21BBFF;
+            filter: blur(100px);
+            border-radius: 50%;
+            position: absolute;
+            right: -20px;
+            top: 120px;
+            z-index: 0;
+        }
+
+        &--javascript {
+            width: 615.1px;
+            height: 600.06px;
+            background: #F5B762;
+            filter: blur(100px);
+            border-radius: 50%;
+            position: absolute;
+            right: -20px;
+            top: 120px;
+            z-index: 0;
+        }
+    }
+}
