@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./BA.module.scss";
 import HeroDetails from "../../Components/HeroDetails/HeroDetails";
-import StudyProcess from "../../Components/StudyProcess/StudyProcess";
-import Teachers from "../../Components/Teachers/Teachers";
-import Consultation from "../../Components/Consultation/Consultation";
+import Container from "../../Components/Container/Container";
 
 const BA = () => {
   return (
     <div className={styles["business-analyst"]}>
       <HeroDetails />
+      <Container className={styles['business-analyst__container']}>
+        sections
+      </Container>
     </div>
   );
 };

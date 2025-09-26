@@ -10,12 +10,12 @@ const CourseCard = ({ title, color, imageLink, url }) => {
   }
 
   return (
-    <div className={s.course_card} style={{ backgroundColor: color, color: color }} onClick={handleNavigate}>
+    <div className={s.course_card} style={{ backgroundColor: color, color: color }}>
       <div className={s.logo_wrap}>
         <img src={imageLink} alt="" />
       </div>
       <h3>{title}</h3>
-      <button>Подробнее</button>
+      <button onClick={handleNavigate}>Подробнее</button>
     </div>
   )
 };
