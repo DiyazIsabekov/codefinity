@@ -15,6 +15,7 @@ const Home = () => {
       <Partners />
       <Teachers />
       <Consultation />
+
     </div>
   );
 };
