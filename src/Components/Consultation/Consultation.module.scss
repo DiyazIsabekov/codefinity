@@ -12,60 +12,59 @@
     padding: 30px 70px;
     width: 100%;
     color: #fff;
-}
 
-.mainText {
-    color: white;
-    font-family: "Onest", sans-serif;
-    width: 60%;
-
-    h4 {
-        font-size: 48px;
-        font-weight: 700;
-        margin-bottom: 20px
-    }
-
-    h5 {
-        font-size: 40px;
-        font-weight: 500;
-    }
-
-    p {
-        font-size: 30px;
+    .mainText {
         color: white;
-        font-weight: 200;
+        font-family: "Onest", sans-serif;
+        width: 60%;
+
+        h4 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px
+        }
+
+        h5 {
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 30px;
+            color: white;
+            font-weight: 200;
+        }
     }
-}
 
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 33%;
 
+    }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 33%;
-}
+    .form input {
+        padding: 18px 25px;
+        border: none;
+        border-radius: 20px;
+        font-size: 18px;
+        font-family: "Onest", sans-serif;
+    }
 
-.form input {
-    padding: 18px 25px;
-    border: none;
-    border-radius: 20px;
-    font-size: 18px;
-    font-family: "Onest", sans-serif;
-}
+    .form button {
+        font-family: "Onest", sans-serif;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 25px;
+        background-color: #000;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.3s ease;
 
-.form button {
-    font-family: "Onest", sans-serif;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 25px;
-    background-color: #000;
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-
-    &:hover {
-        background-color: #333;
+        &:hover {
+            background-color: #333;
+        }
     }
 }
