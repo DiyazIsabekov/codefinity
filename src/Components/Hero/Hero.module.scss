@@ -1,56 +1,91 @@
 .hero {
     position: relative;
     overflow: visible;
-    margin: 200px 0;
+    margin-bottom: 80px;
+    height: 80vh;
 }
 
 .main_info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
     position: relative;
+
 }
 
 .title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
     width: 50%;
-    gap: 30px;
+    gap: 100px;
     z-index: 2;
+
+    h1 {
+        font-size: 68px;
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif;
+        margin: 80px 0 180px 0;
+    }
 }
 
-h1 {
-    font-size: 60px;
-    font-weight: 700;
-    font-family: "Onest", sans-serif;
+
+
+.infoWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 40px;
+
+    h3 {
+        font-size: 59.97px;
+        color: #595959;
+        font-family: "Onest", sans-serif;
+        font-weight: 700;
+    }
+
+    p {
+        font-family: "Onest", sans-serif;
+        font-size: 21.66px;
+        font-weight: 400;
+        color: #595959;
+    }
 }
+
+
 
 .request {
     border-radius: 35px;
     cursor: pointer;
     border: none;
-    background-color: #F46E08;
+
+    background: linear-gradient(270deg, #A91525, #F46E08, #A91525);
+    background-size: 400% 400%;
+    transition: background-position 0.6s ease-in-out;
+
     font-family: "Onest", sans-serif;
     font-weight: 300;
     font-size: 20px;
     padding: 13px 30px;
     color: #FFFFFF;
     width: 60%;
-    max-width: 250px;
+
+}
+
+.request:hover {
+    background-position: 100% 0;
+
 }
 
 .imageWrapper {
     position: absolute;
-    right: -110px;
-    top: 50%;
+    right: -190px;
+    top: 60%;
     transform: translateY(-50%);
-    z-index: 1;
-}
+    z-index: -10;
 
-.infinity {
-    width: 90vh;
-    max-width: 800px;
-    height: auto;
+    .infinity {
+        width: 90vh;
+        max-width: 800px;
+        height: auto;
+    }
 }

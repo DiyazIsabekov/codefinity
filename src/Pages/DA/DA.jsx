@@ -1,7 +1,10 @@
 import React from "react";
+import HeroDetails from "../../Components/HeroDetails/HeroDetails";
 
 const DA = () => {
-  return <div></div>;
+  return (
+    <HeroDetails />
+  );
 };
 
 export default DA;
