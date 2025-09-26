@@ -1,7 +1,11 @@
 import React from "react";
 
 const BA = () => {
-  return <div>BA</div>;
+  return (
+    <div>
+      <HeroDetail color="red" />
+    </div>
+  );
 };
 
 export default BA;
