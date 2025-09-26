@@ -1,57 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-header {
-    width: 80%;
-    margin: 0 auto;
-}
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 .navigation_block {
-    width: 100%;
-    border-bottom: 1px solid #D71F2B;
+  width: 100%;
+  border-bottom: 1px solid #d71f2b;
 
-    .container {
-        width: 80%;
-        margin: 0 auto;
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Onest", sans-serif;
+
+    .logo {
+      width: 250px;
+      height: auto;
+    }
+  }
+
+  nav {
+    width: 50%;
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+
+      .menu_items {
+        display: inline-block;
+        text-decoration: none;
+        color: #434343;
+        font-weight: 400;
+        font-size: 18px;
+        transition: all 0.3s ease;
+        border-radius: 35px;
         padding: 10px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 14px;
-        font-weight: 300;
-        font-family: "Onest", sans-serif;
 
-        .logo {
-            width: 250px;
-            height: auto;
+        &:hover {
+          background: linear-gradient(to right, #a91525, #f46e08);
+          color: white;
         }
+      }
     }
-
-    nav {
-        width: 50%;
-
-        .menu {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            list-style: none;
-
-            .menu_items {
-                display: inline-block;
-                text-decoration: none;
-                color: #434343;
-                font-weight: 400;
-                font-size: 18px;
-                transition: all 0.3s ease;
-                border-radius: 35px;
-                padding: 10px 20px;
-
-                &:hover {
-                    background: linear-gradient(to right, #A91525, #F46E08);
-                    color: white;
-                }
-            }
-        }
-
-    }
+  }
 }
