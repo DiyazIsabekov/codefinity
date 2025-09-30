@@ -1,44 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
-
-.cardWrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-h2 {
-    margin: 40px;
-}
-
-.card {
-    background-color: #E44A59;
-    width: 30%;
-    border-radius: 20px;
-    font-family: "Onest", sans-serif;
+@import "../../SCSS/mixins";
 
 
-    h3 {
-        margin: 15px 0 10px;
-        font-size: 22.75px;
-        color: white;
-        padding: 7px 30px 0 35px;
+
+.teachersSection {
+    h2 {
+        margin: 40px;
     }
 
-    p {
-        font-size: 17px;
-        color: white;
-        padding: 0 30px 40px 35px;
-        font-weight: 100;
+    .cardWrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+            background-color: #E44A59;
+            width: 30%;
+            border-radius: 20px;
+            font-family: "Onest", sans-serif;
+
+
+            h3 {
+                margin: 15px 0 10px;
+                font-size: 22.75px;
+                color: white;
+                padding: 7px 30px 0 35px;
+            }
+
+            p {
+                font-size: 17px;
+                color: white;
+                padding: 0 30px 40px 35px;
+                font-weight: 100;
+            }
+
+            .imgWrapper {
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 20px;
+                }
+
+
+            }
+        }
     }
-}
 
-.imgWrapper {
-    position: relative;
+    //992
+    @include tablet {
+        h2 {
+            font-size: 40px;
+        }
 
-    img {
-        width: 100%;
-        height: auto;
-        border-radius: 20px;
+        .cardWrapper {
+            .card {
+                width: 32%;
+
+                h3 {
+                    font-size: 19px;
+                    margin: 8px 0 7px;
+                    padding: 7px 30px 0 30px;
+                }
+
+                p {
+                    font-size: 16px;
+                    padding: 0 30px 25px 30px;
+                }
+            }
+
+        }
     }
 
+    //767
+    @include mobileL {
+        h2 {
+            font-size: 37px;
+        }
 
+        .cardWrapper {
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+
+            .card {
+                width: 100%;
+
+            }
+        }
+    }
+
+    //500
+    @include mobileM {
+        h2 {
+            font-size: 31px;
+        }
+    }
 }

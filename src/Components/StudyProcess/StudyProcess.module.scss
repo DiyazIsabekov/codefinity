@@ -1,71 +1,212 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "../../SCSS/mixins";
 
-.heading {
-    font-size: 48px;
-    font-weight: 700;
-    text-align: left;
-    margin: 40px 0;
-    font-family: "Inter", sans-serif;
-}
 
 .full_info {
     position: relative;
-}
 
-.imageWrapper {
-    position: absolute;
-    right: -190px;
-    top: 62%;
-    transform: translateY(-50%);
-    z-index: 1;
-
-    .infinity {
-        width: 90vh;
-        max-width: 650px;
-        height: auto;
+    .heading {
+        font-size: 48px;
+        font-weight: 700;
+        text-align: left;
+        margin: 40px 0;
+        font-family: "Inter", sans-serif;
     }
-}
 
+    h4 {
+        font-size: 24px;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        margin: 30px auto;
+    }
 
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
 
-h4 {
-    font-size: 24px;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    margin: 30px auto;
-}
+        .card {
+            border: 1px solid #000;
+            border-radius: 20px;
+            padding: 20px 25px;
+            transition: 0.3s;
 
-.cards {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+            &:hover {
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                transform: translateY(-3px);
+                background-color: rgb(235, 235, 235);
+            }
 
-    .card {
-        border: 1px solid #000;
-        border-radius: 20px;
-        padding: 20px 25px;
-        transition: 0.3s;
-
-        &:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transform: translateY(-3px);
-            background-color: rgb(235, 235, 235);
         }
 
+        .cardTitle {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: black;
+            font-family: "Inter", sans-serif;
+        }
+
+        .cardText {
+            font-size: 15px;
+            color: #000000;
+            font-weight: 400;
+            font-family: "Inter", sans-serif;
+        }
     }
 
-    .cardTitle {
-        font-size: 22px;
-        font-weight: 700;
-        margin-bottom: 10px;
-        color: black;
-        font-family: "Inter", sans-serif;
+    .imageWrapper {
+        position: absolute;
+        right: -190px;
+        top: 62%;
+        transform: translateY(-50%);
+        z-index: 1;
+
+        .infinity {
+            width: 90vh;
+            max-width: 650px;
+            height: auto;
+        }
     }
 
-    .cardText {
-        font-size: 15px;
-        color: #000000;
-        font-weight: 400;
-        font-family: "Inter", sans-serif;
+
+    @include old1024 {
+
+        .heading {
+            font-size: 41px;
+        }
+
+        h4 {
+            font-size: 22px;
+        }
+
+        .cards {
+            .cardTitle {
+                font-size: 19px;
+            }
+
+            .cardText {
+                font-size: 13px;
+            }
+        }
+
+        .imageWrapper {
+            right: -95px;
+            z-index: -1;
+
+            .infinity {
+                width: 60vh;
+            }
+        }
     }
+
+    //992
+    @include tablet {
+        .heading {
+            font-size: 37px;
+        }
+
+        h4 {
+            font-size: 21px;
+        }
+
+        .cards {
+            .cardTitle {
+                font-size: 18px;
+            }
+
+            .cardText {
+                font-size: 13px;
+            }
+        }
+
+        .imageWrapper {
+            right: -75px;
+            z-index: -1;
+
+            .infinity {
+                width: 55vh;
+            }
+        }
+    }
+
+    //767
+    @include mobileL {
+
+        .heading {
+            font-size: 30px;
+            margin: 40px 0 20px 0;
+        }
+
+        h4 {
+            font-size: 18px;
+            margin: 15px auto;
+        }
+
+        .cards {
+            gap: 10px;
+
+            .card {
+                padding: 15px 18px;
+            }
+
+            .cardTitle {
+                font-size: 17px;
+                margin-bottom: 2px;
+            }
+
+            .cardText {
+                font-size: 12px;
+            }
+        }
+
+        .imageWrapper {
+            display: none;
+
+        }
+    }
+
+    //500
+    @include mobileM {
+        .heading {
+            font-size: 25px;
+            margin: 40px 0 10px 0;
+        }
+
+        h4 {
+            font-size: 16px;
+            margin: 14px auto;
+        }
+
+        .cards {
+            gap: 10px;
+
+            .card {
+                padding: 10px 15px;
+            }
+
+            .cardTitle {
+                font-size: 15px;
+            }
+
+            .cardText {
+                font-size: 11px;
+            }
+        }
+
+
+    }
+
+    @include mobileS {
+        .heading {
+            font-size: 23px;
+            margin: 35px 0 5px 0;
+        }
+
+        h4 {
+            font-size: 14px;
+            margin: 10px auto;
+        }
+    }
+
 }

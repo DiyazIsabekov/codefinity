@@ -7,49 +7,63 @@ import javaLogo from "../../assets/images/java.png";
 import javaScriptLogo from "../../assets/images/javascript 1.png";
 import CourseCard from "../CourseCard/CourseCard";
 import s from "./CourseList.module.scss";
+import { motion } from "framer-motion";
 
 const cardData = [
   {
     title: "DevOps разработчик",
     imageLink: devopsLogo,
     color: "#6294FF",
-    url: '/courses/dev-ops'
+    url: "/courses/dev-ops",
   },
   {
     title: "Business Analytics Разработчик",
     imageLink: BALogo,
     color: "#E44A59",
-    url: '/courses/business-analyst'
+    url: "/courses/business-analyst",
   },
   {
     title: "Data Analytics Разработчик",
     imageLink: DALogo,
     color: "#273DA4",
-    url: '/courses/data-analytics'
+    url: "/courses/data-analytics",
   },
   {
     title: "Flutter Разработчик",
     imageLink: flutterLogo,
     color: "#58C87C",
-    url: '/courses/flutter'
+    url: "/courses/flutter",
   },
   {
     title: "Java Разработчик",
     imageLink: javaLogo,
     color: "#41B3E5",
-    url: '/courses/java'
+    url: "/courses/java",
   },
   {
     title: "JavaScript Разработчик",
     imageLink: javaScriptLogo,
     color: "#F5B762",
-    url: '/courses/javascript'
+    url: "/courses/javascript",
   },
 ];
 
 const CourseList = () => {
   return (
-    <section>
+    <motion.section
+      variants={{
+        hidden: { opacity: 0 },
+        show: {
+          opacity: 1,
+          transition: {
+            staggerChildren: 0.25,
+          },
+        },
+      }}
+      initial="hidden"
+      animate="show"
+    >
+      <a name="courses"></a>
       <h2>Выберите Свой Курс</h2>
       <div className={s.card_wrap}>
         {cardData.map((el, i) => (
@@ -59,7 +73,7 @@ const CourseList = () => {
       <div className={s.btn}>
         <button className={s.btn_request}>ОСТАВИТЬ ЗАЯВКУ</button>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

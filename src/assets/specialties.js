@@ -20,6 +20,10 @@ import JavaImageFourth from './images/java_image-fourth.png';
 import JavaScriptImageFirst from './images/javascript_image-first.png';
 import JavaScriptImageSecond from './images/javascript_image-second.png';
 import JavaScriptImageThird from './images/javascript_image-third.png';
+import ImageMobilDevOps from './images/image-mobil_dev-ops.png';
+import ImageMobilDataAnalytics from './images/image-mobil_data-analytics.png';
+import ImageMobilJava from './images/image-mobil_java.png';
+import ImageMobilJavaScript from './images/image-mobil_java-script.png';
 
 export const specialties = [
     {
@@ -30,6 +34,7 @@ export const specialties = [
             BusinessAnalystImageSecond,
             BusinessAnalystImageThird
         ],
+        imageMobil: null,
         loc: '/courses/business-analyst'
     },
     {
@@ -41,6 +46,7 @@ export const specialties = [
             DevOpsImageThird,
             DevOpsImageFourth
         ],
+        imageMobil: ImageMobilDevOps,
         loc: '/courses/dev-ops'
     },
     {
@@ -52,6 +58,7 @@ export const specialties = [
             DataAnalyticsImageThird,
             DataAnalyticsImageFourth,
         ],
+        imageMobil: ImageMobilDataAnalytics,
         loc: '/courses/data-analytics'
     },
     {
@@ -63,6 +70,7 @@ export const specialties = [
             FlutterImageThird,
             FlutterImageFourth
         ],
+        imageMobil: null,
         loc: '/courses/flutter'
     },
     {
@@ -74,6 +82,7 @@ export const specialties = [
             JavaImageThird,
             JavaImageFourth
         ],
+        imageMobil: ImageMobilJava,
         loc: '/courses/java'
     },
     {
@@ -84,6 +93,7 @@ export const specialties = [
             JavaScriptImageSecond,
             JavaScriptImageThird
         ],
+        imageMobil: ImageMobilJavaScript,
         loc: '/courses/javascript'
     },
 ]
