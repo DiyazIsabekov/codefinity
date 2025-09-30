@@ -3,18 +3,19 @@ import styles from "./HeroDetails.module.scss";
 import { useLocation } from "react-router-dom";
 import { specialties } from "../../assets/specialties";
 import classNames from "classnames";
+import { useMediaQuery } from "react-responsive";
+import HeroDetailFooter from '../../assets/images/hero-detail__footer.png';
 
 const HeroDetails = () => {
     const [heroData, setHeroData] = useState(null);
     const { pathname } = useLocation();
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
     useEffect(() => {
         setHeroData(specialties.find((item) => item.loc === pathname));
     }, [pathname]);
 
-    const lastPath =
-        heroData?.loc.split("/")[heroData?.loc.split("/").length - 1];
-    console.log(lastPath);
+    const lastPath = heroData?.loc.split("/")[heroData?.loc.split("/").length - 1];
 
     return (
         <div
@@ -57,18 +58,31 @@ const HeroDetails = () => {
                         </div>
                     </div>
                 </div>
-                {["first", "second", "third", "fourth"].map((type, index) => (
-                    <img
-                        src={heroData?.imageItems[index]}
-                        alt={lastPath}
-                        className={classNames(
-                            styles["hero-detail__image"],
-                            styles[`hero-detail__image--${lastPath}`],
-                            styles[`hero-detail__image--${lastPath}-${type}`]
-                        )}
-                        key={index}
-                    />
-                ))}
+                {
+                    isTabletOrMobile ? (
+                        <img
+                            src={heroData?.imageMobil}
+                            alt="img"
+                            className={classNames(
+                                styles['hero-detail__image-mobil'],
+                                styles[`hero-detail__image-mobil--${lastPath}`]
+                            )}
+                        />
+                    ) : (
+                        ["first", "second", "third", "fourth"].map((type, index) => (
+                            <img
+                                src={heroData?.imageItems[index]}
+                                alt={lastPath}
+                                className={classNames(
+                                    styles["hero-detail__image"],
+                                    styles[`hero-detail__image--${lastPath}`],
+                                    styles[`hero-detail__image--${lastPath}-${type}`]
+                                )}
+                                key={index}
+                            />
+                        ))
+                    )
+                }
             </div>
             <div
                 className={classNames(
@@ -76,6 +90,11 @@ const HeroDetails = () => {
                     styles[`hero-detail__circle--${lastPath}`]
                 )}
             ></div>
+            {
+                isTabletOrMobile && (
+                    <img src={HeroDetailFooter} alt='hero-detail__footer' className={styles['hero-detail__footer']}></img>
+                )
+            }
         </div>
     );
 };
