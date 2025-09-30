@@ -28,6 +28,7 @@ const teachers = [
 const Teachers = () => {
     return (
         <section className={s.teachersSection}>
+            <a name="teachers"></a>
             <h2>Наши Преподаватели</h2>
             <div className={s.cardWrapper}>
                 {teachers.map((el) => (

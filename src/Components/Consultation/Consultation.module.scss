@@ -1,6 +1,11 @@
+@import "../../SCSS/mixins";
+
+
 .section {
     width: 100%;
     margin: 60px 0;
+
+
 }
 
 .consultWrapper {
@@ -9,7 +14,7 @@
     align-items: center;
     background-color: #65D98A;
     border-radius: 25px;
-    padding: 30px 70px;
+    padding: 30px 70px 50px 70px;
     width: 100%;
     color: #fff;
 
@@ -21,7 +26,7 @@
         h4 {
             font-size: 48px;
             font-weight: 700;
-            margin-bottom: 20px
+            margin-bottom: 10px;
         }
 
         h5 {
@@ -42,29 +47,165 @@
         gap: 15px;
         width: 33%;
 
+        input {
+            padding: 18px 25px;
+            border: none;
+            border-radius: 20px;
+            font-size: 18px;
+            font-family: "Onest", sans-serif;
+        }
+
+        button {
+            font-family: "Onest", sans-serif;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 25px;
+            background-color: #000;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+
+            &:hover {
+                background-color: #333;
+            }
+        }
     }
 
-    .form input {
-        padding: 18px 25px;
-        border: none;
-        border-radius: 20px;
-        font-size: 18px;
-        font-family: "Onest", sans-serif;
+    //1280
+    @include oldMonitor {
+        .mainText {
+            h4 {
+                font-size: 40px;
+            }
+
+            h5 {
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 25px;
+                margin-top: 10px;
+            }
+        }
     }
 
-    .form button {
-        font-family: "Onest", sans-serif;
-        padding: 15px 20px;
-        border: none;
-        border-radius: 25px;
-        background-color: #000;
-        color: #fff;
-        font-size: 18px;
-        cursor: pointer;
-        transition: background 0.3s ease;
+    //992
+    @include tablet {
 
-        &:hover {
-            background-color: #333;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 30px 40px 30px;
+
+        .mainText {
+            width: 100%;
+            padding: 0;
+            text-align: center;
+
+            h4 {
+                font-size: 33px;
+                margin-top: 12px;
+            }
+
+            h5 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 20px;
+                margin: 10px 0;
+            }
+        }
+
+        .form {
+            width: 55%;
+            margin-top: 10px;
+
+            input {
+                padding: 15px 20px;
+            }
+        }
+    }
+
+    //767
+    @include mobileL {
+        padding: 7px 20px 30px 20px;
+
+        .mainText {
+
+            h4 {
+                font-size: 23px;
+                margin-top: 14px;
+            }
+
+            h5 {
+                font-size: 21px;
+            }
+
+            p {
+                font-size: 18px;
+                margin: 7px 0;
+            }
+        }
+
+        .form {
+            width: 55%;
+            margin-top: 10px;
+            gap: 10px;
+
+            input {
+                font-size: 15px;
+            }
+
+            button {
+                font-size: 15px;
+            }
         }
     }
 }
+
+//500
+@include mobileM {
+    .consultWrapper {
+        padding: 0 12px 20px 12px;
+
+        .mainText {
+
+            h4 {
+                font-size: 18px;
+            }
+
+            h5 {
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 14px;
+                margin: 5px 0;
+            }
+        }
+
+        .form {
+            width: 90%;
+            margin-top: 10px;
+            gap: 10px;
+
+            input {
+                font-size: 15px;
+            }
+
+            button {
+                font-size: 15px;
+            }
+        }
+    }
+
+
+}
+
+// @mixin mobileS {
+//   @media screen and (max-width: 430px) {
+//     @content;
+//   }
+// }
