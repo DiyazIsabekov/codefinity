@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import "../../SCSS/mixins";
+
 
 .navigation_block {
   width: 100%;
   border-bottom: 1px solid #d71f2b;
+
 
   .container {
     width: 80%;
@@ -12,6 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     font-size: 14px;
     font-weight: 300;
     font-family: "Onest", sans-serif;
@@ -19,11 +23,12 @@
     .logo {
       width: 250px;
       height: auto;
+
     }
   }
 
   nav {
-    width: 50%;
+    width: 55%;
 
     .menu {
       display: flex;
@@ -40,12 +45,232 @@
         transition: all 0.3s ease;
         border-radius: 35px;
         padding: 10px 20px;
+        background: white;
+        background-position: 100% 50%;
+        transition: background-position 0.6s ease-in-out, color 0.1s ease-in-out;
 
         &:hover {
-          background: linear-gradient(to right, #a91525, #f46e08);
+          background: linear-gradient(270deg, #a91525, #f46e08, #a91525);
+          background-size: 400% 400%;
+          background-position: 0% 50%;
           color: white;
         }
       }
     }
   }
+
+  .burger_nav {
+    display: none;
+
+    input {
+      display: none;
+    }
+
+    .btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      position: relative;
+
+      span,
+      span::before,
+      span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #000000;
+        transition: 0.3s ease;
+        border-radius: 2px;
+      }
+
+      span::before {
+        content: "";
+        top: -8px;
+      }
+
+      span::after {
+        content: "";
+        top: 8px;
+      }
+
+      &.open {
+        span {
+          background: transparent;
+        }
+
+        span::before {
+          transform: rotate(45deg) translate(5px, 5px);
+          top: 0;
+        }
+
+        span::after {
+          transform: rotate(135deg) translate(5px, -5px);
+          top: 0;
+        }
+      }
+    }
+
+    .burger_menu {
+      display: none;
+      flex-direction: column;
+      list-style: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: white;
+      width: 100vw;
+      height: auto;
+      z-index: 10;
+      margin-top: 55px;
+      align-items: center;
+      justify-content: start;
+
+      li {
+        width: 90%;
+        text-align: center;
+        padding: 10px 20px;
+
+        a {
+          text-decoration: none;
+          color: #434343;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #d71f2b;
+        }
+      }
+    }
+
+    .active {
+      display: flex;
+    }
+  }
+
+
+  @include LaptopL {
+    width: 100%;
+
+    .container {
+      .logo {
+        width: 200px;
+        height: auto;
+      }
+
+      nav {
+        width: 70%;
+
+        .menu {
+          .menu_items {
+            padding: 10px;
+            font-size: 16px;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  // 1280
+  @include oldMonitor {
+    width: 100%;
+
+    .container {
+      .logo {
+        width: 170px;
+        height: auto;
+      }
+
+      nav {
+        width: 70%;
+
+        .menu {
+          .menu_items {
+            padding: 10px;
+            font-size: 13px;
+          }
+        }
+
+      }
+    }
+  }
+
+  //1024
+  @include old1024 {
+    width: 100%;
+
+    .container {
+      .logo {
+        width: 160px;
+        height: auto;
+      }
+
+      nav {
+        width: 68%;
+
+        .menu {
+          .menu_items {
+            padding: 10px;
+            font-size: 15px;
+          }
+        }
+
+      }
+    }
+  }
+
+  //992px
+  @include tablet {
+    width: 100%;
+
+    .container {
+      .logo {
+        width: 155px;
+        height: auto;
+      }
+
+      nav {
+        width: 70%;
+
+        .menu {
+          .menu_items {
+            padding: 5px;
+            font-size: 10px;
+          }
+        }
+
+      }
+    }
+  }
+
+  //767px
+  @include mobileL {
+    @include mobileL {
+      .menu_nav {
+        display: none;
+      }
+
+      .burger_nav {
+        display: block;
+      }
+    }
+  }
+
+  @mixin mobileM {
+    @media screen and (max-width: 500px) {
+      @content;
+    }
+  }
+
+  @mixin mobileS {
+    @media screen and (max-width: 430px) {
+      @content;
+    }
+  }
+
+
 }

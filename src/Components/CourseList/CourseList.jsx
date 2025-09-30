@@ -50,6 +50,7 @@ const cardData = [
 const CourseList = () => {
   return (
     <section>
+      <a name="courses"></a>
       <h2>Выберите Свой Курс</h2>
       <div className={s.card_wrap}>
         {cardData.map((el, i) => (

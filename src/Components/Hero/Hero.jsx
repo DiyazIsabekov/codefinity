@@ -21,7 +21,7 @@ const Hero = () => {
                                 <h3>20+</h3>
                                 <p>компаний-партнеров</p>
                             </div>
-                            <div>
+                            <div className={s.infoItem}>
                                 <img src={pic2} alt="comp" />
                                 <p>онлайн/оффлайн</p>
                             </div>
