@@ -8,6 +8,7 @@ import Teachers from '../../Components/Teachers/Teachers';
 import Consultation from "../../Components/Consultation/Consultation";
 import Reviews from "../../Components/Reviews/Reviews";
 import Container from "../../Components/Container/Container";
+import Accordion from '../../Components/Accordion/Accordion'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <Teachers />
         <Consultation />
         <Reviews />
+        <Accordion/>
       </Container>
       </div>
   );
