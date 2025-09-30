@@ -1,5 +1,11 @@
 // for adaptive ====================================================
 
+@mixin minLaptopL {
+  @media screen and (min-width: 1441px) {
+    @content;
+  }
+}
+
 @mixin LaptopL {
   @media screen and (max-width: 1440px) {
     @content;
@@ -24,8 +30,14 @@
   }
 }
 
+@mixin minMobileL {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+
 @mixin mobileL {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }
