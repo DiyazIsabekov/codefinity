@@ -1,15 +1,13 @@
 import React, {useState} from 'react';
-import s from './Accordion.module.scss'
+import s from './Accordion_BA.module.scss'
 // import arr_up from '../../assets/images/acc_but_up.png'
 // import arr_down from '../../assets/images/acc_but_down.png'
-import {ReactComponent as ArrowIcon} from '../../assets/images/arrow_accordion.svg'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
 // import Grid  from '@mui/material';
 
 
@@ -133,7 +131,7 @@ export default function ControlledAccordions() {
            }}
       >
         <AccordionSummary 
-                
+            
           //   expandIcon={
           //   expandedId === el.id ? (
           //   <img 
@@ -145,25 +143,6 @@ export default function ControlledAccordions() {
           //   />
           // )
           // }
-          expandIcon={
-            <IconButton
-               sx={{
-               width: 50,
-               height: 44,
-               color: expandedId === el.id ? '#E44A59' : 'grey',
-              }}
-             >
-            <ArrowIcon
-              style={{
-              // width: 24,
-              // height: 24,
-              transform: expandedId === el.id ? 'rotate(180deg)' : 'rotate(0deg)',
-              transition: 'transform 0.5s ease, fill 0.5s ease',
-            }}
-            />
-            </IconButton>
-          }
-
           sx={{
            "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
             transform: "none", 
@@ -189,7 +168,6 @@ export default function ControlledAccordions() {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          
       <Box className={s.main_module}>
           <Box className={s.module_left}>
           <Typography sx={{ margin: 0, padding: 0 }} className={s.left_title}>
@@ -201,6 +179,11 @@ export default function ControlledAccordions() {
             {el.theme_title}
           </Typography>
         </Box>
+        {/* <img
+         src={expandedId === el.id ? arr_down : arr_up}
+         alt="toggle"
+         className={s.expandIcon}
+        /> */}
       </Box>
         </AccordionSummary>
 
