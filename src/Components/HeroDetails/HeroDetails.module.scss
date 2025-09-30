@@ -1,148 +1,298 @@
+@import '../../SCSS/mixins';
+@import '../../SCSS/functions';
+
 .hero-detail {
-    height: 791px;
-    background-color: black;
-    padding: 216px 0 0 104px;
     position: relative;
-    overflow: hidden;
+
+    @include minLaptopL {
+        font-size: 16px;
+        height: 791px;
+        padding: 216px 0 0 104px;
+    }
+
+    @include minMobileL {
+        font-size: 1.11vw;
+        height: px-to-em(791);
+        padding: px-to-em(216) 0 0 px-to-em(104);
+    }
+
+    @include mobileL {
+        font-size: 4.27vw;
+        height: px-to-em(417);
+        padding: px-to-em(51) 0 px-to-em(64.64) px-to-em(11);
+    }
+
 
     &--business-analyst {
-        background: linear-gradient(225.71deg, #000000 62.75%, #F40808 115.11%);
+        @include minMobileL {
+            background: linear-gradient(225.71deg, #000000 62.75%, #2CA2FF 115.11%);
+        }
+
+        @include mobileL {
+            background: linear-gradient(225.71deg, #000000 62.75%, #F40808 115.11%);
+        }
     }
 
     &--dev-ops {
-        background: linear-gradient(229.93deg, #000000 51.72%, #2CA2FF 117.28%);
+        @include minMobileL {
+            background: linear-gradient(229.93deg, #000000 51.72%, #2CA2FF 117.28%);
+        }
+
+        @include mobileL {
+            background: linear-gradient(225.71deg, #000000 62.75%, #2CA2FF 115.11%);
+        }
     }
 
     &--data-analytics {
-        background: linear-gradient(270deg, #273DA4 48.4%, #5F70BF 97.02%);
+        @include minMobileL {
+            background: linear-gradient(270deg, #273DA4 48.4%, #5F70BF 97.02%);
+        }
+
+        @include mobileL {
+            background: linear-gradient(225.71deg, #000000 62.75%, #5F70BF 99.25%);
+        }
     }
 
     &--flutter {
-        background: linear-gradient(224.64deg, #000000 71.13%, #7CE529 110.76%);
+        @include minMobileL {
+            background: linear-gradient(224.64deg, #000000 71.13%, #7CE529 110.76%);
+        }
+
+        @include mobileL {
+            background: linear-gradient(225.71deg, #000000 62.75%, #7CE529 99.25%);
+        }
     }
 
     &--java {
-        background: linear-gradient(231.46deg, #000000 75.6%, #21BBFF 109.05%);
+        @include minMobileL {
+            background: linear-gradient(231.46deg, #000000 75.6%, #21BBFF 109.05%);
+        }
+
+        @include mobileL {
+            background: linear-gradient(225.71deg, #000000 62.75%, #21BBFF 99.25%);
+        }
     }
 
     &--javascript {
-        background: linear-gradient(217.03deg, #000000 78.75%, #F5B762 108.03%);
+        @include minMobileL {
+            background: linear-gradient(217.03deg, #000000 78.75%, #F5B762 108.03%);
+        }
+
+        @include mobileL {
+            background: linear-gradient(225.71deg, #000000 62.75%, #F5B762 99.25%);
+        }
     }
 
     &__container {}
 
     &__info {
         position: relative;
-        z-index: 1;
+        z-index: 2;
     }
 
     &__title {
         color: #FFFFFF;
-        font-size: 78px;
         font-weight: 800;
-        line-height: 78px;
         margin: 0 !important;
-        width: 902px;
+
+        @include minMobileL {
+            font-size: px-to-em(78);
+            line-height: px-to-em(78, 78);
+            width: px-to-em(902, 78);
+        }
+
+        @include mobileL {
+            font-size: px-to-em(24);
+            line-height: px-to-em(25, 24);
+        }
 
         &--dev-ops {
-            width: 520px;
+            width: px-to-em(520, 78);
         }
     }
 
     &__description {
         color: #FFFFFF;
-        font-size: 20px;
         font-weight: 400;
-        line-height: 28px;
-        width: 460px;
-        margin-top: 13px;
+
+        @include minMobileL {
+            font-size: px-to-em(20);
+            line-height: px-to-em(28, 20);
+            width: px-to-em(460, 20);
+            margin-top: px-to-em(13, 20);
+        }
+
+        @include mobileL {
+            font-size: px-to-em(14);
+            line-height: px-to-em(13, 14);
+            width: px-to-em(242, 14);
+            margin-top: px-to-em(16, 14);
+            letter-spacing: -2%;
+        }
     }
 
     &__results {
         display: flex;
         align-items: center;
-        gap: 40px;
-        margin-top: 40px;
+
+        @include minMobileL {
+            gap: px-to-em(40);
+            margin-top: px-to-em(40);
+        }
+
+        @include mobileL {
+            gap: px-to-em(10);
+            margin-top: px-to-em(52);
+        }
 
         &-item {
             color: #FFFFFF;
-            font-size: 18px;
             font-weight: 400;
-            line-height: 28px;
-            width: 120px;
-            padding-left: 12px;
             border-left: 1px solid #FFFFFF;
+
+            @include minMobileL {
+                font-size: px-to-em(18);
+                line-height: px-to-em(28, 18);
+                width: px-to-em(120, 18);
+                padding-left: px-to-em(12, 18);
+            }
+
+            @include mobileL {
+                font-size: px-to-em(10.03);
+                line-height: px-to-em(15.61, 10.03);
+                width: px-to-em(70, 10.03);
+                padding-left: px-to-em(6, 10.03);
+            }
         }
     }
 
     &__inner {
-        margin-top: 49px;
         display: flex;
-        align-items: center;
-        gap: 24px;
+
+        @include minMobileL {
+            flex-direction: row;
+            gap: px-to-em(24);
+            align-items: center;
+            margin-top: px-to-em(49);
+        }
+
+        @include mobileL {
+            flex-direction: column-reverse;
+            gap: px-to-em(7.48);
+            align-items: start;
+            margin-top: px-to-em(23);
+        }
     }
 
     &__button {
         color: #FFFFFF;
-        font-size: 18px;
         font-weight: 700;
-        line-height: 28px;
         background-color: inherit;
         border: none;
-        padding: 24px 75px;
-        border-radius: 16px;
         border: 1px solid #FFFFFF;
+        cursor: pointer;
+
+        @include minMobileL {
+            font-size: px-to-em(18);
+            line-height: px-to-em(28, 18);
+            padding: px-to-em(24, 18) px-to-em(75, 18);
+            border-radius: px-to-em(16, 18);
+        }
+
+        @include mobileL {
+            font-size: px-to-em(6.48);
+            line-height: px-to-em(10.08, 6.48);
+            padding: px-to-em(8.64, 6.48) px-to-em(27, 6.48) px-to-em(7.72, 6.48);
+            border-radius: px-to-em(5.76, 6.48);
+        }
     }
 
     &__conditions {
         display: flex;
         flex-direction: column;
         align-items: start;
-        gap: 8px;
+        gap: px-to-em(5.19);
 
         p {
             color: #FFFFFF;
-            font-size: 14px;
             font-weight: 500;
-            line-height: 20px;
-            padding: 4px 16px;
             background-color: #FFFFFF26;
-            border-radius: 12px;
+
+            @include minMobileL {
+                font-size: px-to-em(14);
+                line-height: px-to-em(20, 14);
+                padding: px-to-em(4, 14) px-to-em(16, 14);
+                border-radius: px-to-em(12, 14);
+            }
+
+            @include mobileL {
+                font-size: px-to-em(9.08);
+                line-height: px-to-em(12.98, 9.08);
+                padding: px-to-em(2.58, 9.08) px-to-em(10, 9.08);
+                border-radius: px-to-em(7.79, 9.08);
+            }
+        }
+    }
+
+    &__image-mobil {
+        width: px-to-em(300);
+        position: absolute;
+        right: 0;
+        z-index: 1;
+
+        &--dev-ops {
+            top: px-to-em(40);
+        }
+
+        &--data-analytics {
+            top: px-to-em(100);
+        }
+
+        &--flutter {
+            top: px-to-em(100);
+        }
+
+        &--java {
+            top: px-to-em(130);
+        }
+
+        &--javascript {
+            top: px-to-em(105);
         }
     }
 
     &__image {
-        width: 100px;
+        width: px-to-em(100);
 
         &--business-analyst {
             &-first {
-                width: 720px;
+                width: px-to-em(720);
                 position: absolute;
-                top: -20px;
+                top: px-to-em(-20);
                 right: 0;
                 z-index: 2;
             }
 
             &-second {
-                width: 400px;
+                width: px-to-em(400);
                 position: absolute;
-                top: 400px;
-                right: 360px;
+                top: px-to-em(400);
+                right: px-to-em(360);
                 z-index: 1;
             }
 
             &-third {
-                width: 180px;
+                width: px-to-em(180);
                 position: absolute;
                 top: 0;
-                right: 280px;
+                right: px-to-em(280);
                 z-index: 1;
             }
         }
 
         &--dev-ops {
             &-first {
-                width: 1000px;
+                width: px-to-em(1000);
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -150,25 +300,25 @@
             }
 
             &-second {
-                width: 300px;
+                width: px-to-em(300);
                 position: absolute;
-                top: 360px;
-                right: 400px;
+                top: px-to-em(360);
+                right: px-to-em(400);
                 z-index: 1;
             }
 
             &-third {
-                width: 400px;
+                width: px-to-em(400);
                 position: absolute;
-                top: 30px;
-                right: 230px;
+                top: px-to-em(30);
+                right: px-to-em(230);
                 z-index: 1;
             }
 
             &-fourth {
-                width: 300px;
+                width: px-to-em(300);
                 position: absolute;
-                top: 40px;
+                top: px-to-em(40);
                 right: 0;
                 z-index: 1;
             }
@@ -176,33 +326,33 @@
 
         &--data-analytics {
             &-first {
-                width: 1000px;
+                width: px-to-em(1000);
                 position: absolute;
-                top: -30px;
+                top: px-to-em(-30);
                 right: 0;
                 z-index: 2;
             }
 
             &-second {
-                width: 300px;
+                width: px-to-em(300);
                 position: absolute;
-                top: 400px;
-                right: 450px;
+                top: px-to-em(400);
+                right: px-to-em(450);
                 z-index: 1;
             }
 
             &-third {
-                width: 250px;
+                width: px-to-em(250);
                 position: absolute;
-                top: 100px;
-                right: 320px;
+                top: px-to-em(100);
+                right: px-to-em(320);
                 z-index: 1;
             }
 
             &-fourth {
-                width: 320px;
+                width: px-to-em(320);
                 position: absolute;
-                top: -30px;
+                top: px-to-em(-30);
                 right: 0;
                 z-index: 1;
             }
@@ -210,33 +360,33 @@
 
         &--flutter {
             &-first {
-                width: 980px;
+                width: px-to-em(980);
                 position: absolute;
-                top: -60px;
+                top: px-to-em(-60);
                 right: 0;
                 z-index: 2;
             }
 
             &-second {
-                width: 300px;
+                width: px-to-em(300);
                 position: absolute;
-                top: 300px;
-                right: 440px;
+                top: px-to-em(300);
+                right: px-to-em(440);
                 z-index: 3;
             }
 
             &-third {
-                width: 300px;
+                width: px-to-em(300);
                 position: absolute;
-                top: 80px;
-                right: 270px;
+                top: px-to-em(80);
+                right: px-to-em(270);
                 z-index: 1;
             }
 
             &-fourth {
-                width: 160px;
+                width: px-to-em(160);
                 position: absolute;
-                top: 25px;
+                top: px-to-em(25);
                 right: 0;
                 z-index: 1;
             }
@@ -244,136 +394,121 @@
 
         &--java {
             &-first {
-                width: 980px;
+                width: px-to-em(980);
                 position: absolute;
-                top: -30px;
+                top: px-to-em(-30);
                 right: 0;
                 z-index: 2;
             }
 
             &-second {
-                width: 200px;
+                width: px-to-em(200);
                 position: absolute;
-                top: 420px;
-                right: 540px;
+                top: px-to-em(420);
+                right: px-to-em(540);
                 z-index: 3;
             }
 
             &-third {
-                width: 400px;
+                width: px-to-em(400);
                 position: absolute;
-                top: 270px;
-                right: 220px;
+                top: px-to-em(270);
+                right: px-to-em(220);
                 z-index: 1;
             }
 
             &-fourth {
-                width: 440px;
+                width: px-to-em(440);
                 position: absolute;
-                top: 40px;
-                right: 40px;
+                top: px-to-em(40);
+                right: px-to-em(40);
                 z-index: 1;
             }
         }
 
         &--javascript {
             &-first {
-                width: 980px;
+                width: px-to-em(980);
                 position: absolute;
-                top: -20px;
+                top: px-to-em(-20);
                 right: 0;
                 z-index: 2;
             }
 
             &-second {
-                width: 460px;
+                width: px-to-em(460);
                 position: absolute;
-                top: 240px;
-                right: 240px;
+                top: px-to-em(240);
+                right: px-to-em(240);
                 z-index: 1;
             }
 
             &-third {
-                width: 300px;
+                width: px-to-em(300);
                 position: absolute;
-                top: 10px;
-                right: 220px;
+                top: px-to-em(10);
+                right: px-to-em(220);
                 z-index: 1;
             }
         }
     }
 
     &__circle {
-        &--business-analyst {
-            width: 615.1px;
-            height: 600.06px;
-            background: #A91525;
+        border-radius: 50%;
+        position: absolute;
+
+        @include minMobileL {
+            width: px-to-em(615.1);
+            height: px-to-em(600.06);
             filter: blur(100px);
-            border-radius: 50%;
-            position: absolute;
-            right: -20px;
-            top: 120px;
-            z-index: 0;
+            top: px-to-em(120);
+            right: px-to-em(-20);
+        }
+
+        @include mobileL {
+            width: px-to-em(302.76);
+            height: px-to-em(205.56);
+            filter: blur(60px);
+            top: px-to-em(54);
+            right: px-to-em(-220);
+        }
+
+        &--business-analyst {
+            background: #A91525;
         }
 
         &--dev-ops {
-            width: 615.1px;
-            height: 600.06px;
             background: #2CA2FF;
-            filter: blur(100px);
-            border-radius: 50%;
-            position: absolute;
-            right: -20px;
-            top: 120px;
-            z-index: 0;
         }
 
         &--data-analytics {
-            width: 615.1px;
-            height: 600.06px;
-            background: #000000;
-            filter: blur(100px);
-            border-radius: 50%;
-            position: absolute;
-            right: -20px;
-            top: 120px;
-            z-index: 0;
+            @include minLaptopL {
+                background: #000000;
+            }
+
+            @include mobileL {
+                background: #5F70BF;
+            }
         }
 
         &--flutter {
-            width: 615.1px;
-            height: 600.06px;
             background: #7CE529;
-            filter: blur(100px);
-            border-radius: 50%;
-            position: absolute;
-            right: -20px;
-            top: 120px;
-            z-index: 0;
         }
 
         &--java {
-            width: 615.1px;
-            height: 600.06px;
             background: #21BBFF;
-            filter: blur(100px);
-            border-radius: 50%;
-            position: absolute;
-            right: -20px;
-            top: 120px;
-            z-index: 0;
         }
 
         &--javascript {
-            width: 615.1px;
-            height: 600.06px;
             background: #F5B762;
-            filter: blur(100px);
-            border-radius: 50%;
-            position: absolute;
-            right: -20px;
-            top: 120px;
-            z-index: 0;
         }
+    }
+
+    &__footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: px-to-em(72);
     }
 }

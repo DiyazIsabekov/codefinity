@@ -1,13 +1,15 @@
 import React from "react";
 import styles from "./DevOps.module.scss";
 import HeroDetails from "../../Components/HeroDetails/HeroDetails";
-import StudyProcess from './../../Components/StudyProcess/StudyProcess';
+import Container from "../../Components/Container/Container";
 
 const DevOps = () => {
   return (
     <div className={styles['dev-ops']}>
       <HeroDetails />
-      <StudyProcess />
+      <Container className={styles['dev-ops__container']}>
+        sections
+      </Container>
     </div>
   )
 };
