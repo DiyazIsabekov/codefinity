@@ -5,11 +5,16 @@ import { specialties } from "../../assets/specialties";
 import classNames from "classnames";
 import { useMediaQuery } from "react-responsive";
 import HeroDetailFooter from '../../assets/images/hero-detail__footer.png';
+import { motion } from 'framer-motion';
 
 const HeroDetails = () => {
     const [heroData, setHeroData] = useState(null);
     const { pathname } = useLocation();
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
+    useEffect(() => {
+        window.scrollTo({ top: 0 })
+    }, [pathname])
 
     useEffect(() => {
         setHeroData(specialties.find((item) => item.loc === pathname));
@@ -25,7 +30,21 @@ const HeroDetails = () => {
             )}
         >
             <div className={styles["hero-detail__container"]}>
-                <div className={styles["hero-detail__info"]}>
+                <motion.div
+                    className={styles["hero-detail__info"]}
+                    initial={{
+                        opacity: 0,
+                        x: isTabletOrMobile ? -90 : -180
+                    }}
+                    animate={{
+                        opacity: 1,
+                        x: 0
+                    }}
+                    transition={{
+                        delay: !isTabletOrMobile && 1.5,
+                        duration: 1.4
+                    }}
+                >
                     <h1
                         className={classNames(
                             styles["hero-detail__title"],
@@ -57,39 +76,72 @@ const HeroDetails = () => {
                             <p>Гибкие занятия</p>
                         </div>
                     </div>
-                </div>
-                {
-                    isTabletOrMobile ? (
-                        <img
-                            src={heroData?.imageMobil}
-                            alt="img"
-                            className={classNames(
-                                styles['hero-detail__image-mobil'],
-                                styles[`hero-detail__image-mobil--${lastPath}`]
-                            )}
-                        />
-                    ) : (
-                        ["first", "second", "third", "fourth"].map((type, index) => (
-                            <img
-                                src={heroData?.imageItems[index]}
-                                alt={lastPath}
-                                className={classNames(
-                                    styles["hero-detail__image"],
-                                    styles[`hero-detail__image--${lastPath}`],
-                                    styles[`hero-detail__image--${lastPath}-${type}`]
-                                )}
-                                key={index}
-                            />
-                        ))
-                    )
-                }
+                </motion.div>
+                <motion.div
+                    className={classNames(
+                        styles["hero-detail__circle"],
+                        styles[`hero-detail__circle--${lastPath}`]
+                    )}
+                    initial={{
+                        opacity: 0
+                    }}
+                    animate={{
+                        opacity: 1
+                    }}
+                    transition={{
+                        delay: !isTabletOrMobile && 1.5,
+                        duration: 1.4
+                    }}
+                ></motion.div>
             </div>
-            <div
-                className={classNames(
-                    styles["hero-detail__circle"],
-                    styles[`hero-detail__circle--${lastPath}`]
-                )}
-            ></div>
+            {
+                isTabletOrMobile ? (
+                    <motion.img
+                        src={heroData?.imageMobil}
+                        alt="img"
+                        className={classNames(
+                            styles['hero-detail__image-mobil'],
+                            styles[`hero-detail__image-mobil--${lastPath}`]
+                        )}
+                        initial={{
+                            opacity: 0,
+                            x: 90
+                        }}
+                        animate={{
+                            opacity: 1,
+                            x: 0
+                        }}
+                        transition={{
+                            duration: 1.4
+                        }}
+                    />
+                ) : (
+                    ["first", "second", "third", "fourth"].map((type, index) => (
+                        <motion.img
+                            src={heroData?.imageItems[index]}
+                            alt={lastPath}
+                            className={classNames(
+                                styles["hero-detail__image"],
+                                styles[`hero-detail__image--${lastPath}`],
+                                styles[`hero-detail__image--${lastPath}-${type}`]
+                            )}
+                            key={index}
+                            initial={{
+                                opacity: 0,
+                                x: 180
+                            }}
+                            animate={{
+                                opacity: 1,
+                                x: 0
+                            }}
+                            transition={{
+                                delay: 1.5,
+                                duration: 1.4
+                            }}
+                        />
+                    ))
+                )
+            }
             {
                 isTabletOrMobile && (
                     <img src={HeroDetailFooter} alt='hero-detail__footer' className={styles['hero-detail__footer']}></img>

@@ -7,19 +7,16 @@
     @include minLaptopL {
         font-size: 16px;
         height: 791px;
-        padding: 216px 0 0 104px;
     }
 
     @include minMobileL {
         font-size: 1.11vw;
         height: px-to-em(791);
-        padding: px-to-em(216) 0 0 px-to-em(104);
     }
 
     @include mobileL {
         font-size: 4.27vw;
         height: px-to-em(417);
-        padding: px-to-em(51) 0 px-to-em(64.64) px-to-em(11);
     }
 
 
@@ -83,7 +80,19 @@
         }
     }
 
-    &__container {}
+    &__container {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+
+        @include minMobileL {
+            padding: px-to-em(216) 0 0 px-to-em(104);
+        }
+
+        @include mobileL {
+            padding: px-to-em(51) 0 px-to-em(64.64) px-to-em(11);
+        }
+    }
 
     &__info {
         position: relative;
@@ -104,10 +113,15 @@
         @include mobileL {
             font-size: px-to-em(24);
             line-height: px-to-em(25, 24);
+            width: px-to-em(236, 24);
         }
 
         &--dev-ops {
-            width: px-to-em(520, 78);
+            width: px-to-em(510, 78);
+        }
+
+        &--java {
+            width: px-to-em(760, 78);
         }
     }
 
