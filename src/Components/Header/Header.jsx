@@ -1,27 +1,57 @@
 import React, { useState } from "react";
 import s from "./Header.module.scss";
 import logo from "../../assets/images/logo codefinity.png";
+import { motion } from "framer-motion";
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen)
 
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    show: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+  };
+
+  const listVariants = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.2 } },
+  };
+
   return (
-    <header>
+    <motion.header
+      variants={{
+        hidden: { opacity: 0 },
+        show: { opacity: 1, transition: { duration: 1, staggerChildren: 0.25 } },
+      }}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.3 }}
+
+    >
       <div className={s.navigation_block}>
         <div className={s.container}>
           <a href="/">
-            <img src={logo} className={s.logo} alt="logo" />
+            <motion.img
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              src={logo}
+              className={s.logo}
+              alt="logo" />
           </a>
 
           <nav className={s.menu_nav}>
-            <ul className={s.menu}>
-              <li><a href="#courses" className={s.menu_items}>КУРСЫ</a></li>
-              <li><a href="#projects" className={s.menu_items}>ПРОЕКТЫ СТУДЕНТОВ</a></li>
-              <li><a href="#partners" className={s.menu_items}>ПАРТНЕРЫ</a></li>
-              <li><a href="" className={s.menu_items}>ОТЗЫВЫ</a></li>
-              <li><a href="#teachers" className={s.menu_items}>ПРЕПОДАВАТЕЛИ</a></li>
-            </ul>
+            <motion.ul
+              variants={listVariants}
+              className={s.menu}
+            >
+              <motion.li variants={itemVariants}><a href="#courses" className={s.menu_items}>КУРСЫ</a></motion.li>
+              <motion.li variants={itemVariants}><a href="#projects" className={s.menu_items}>ПРОЕКТЫ СТУДЕНТОВ</a></motion.li>
+              <motion.li variants={itemVariants}><a href="#partners" className={s.menu_items}>ПАРТНЕРЫ</a></motion.li>
+              <motion.li variants={itemVariants}><a href="" className={s.menu_items}>ОТЗЫВЫ</a></motion.li>
+              <motion.li variants={itemVariants}><a href="#teachers" className={s.menu_items}>ПРЕПОДАВАТЕЛИ</a></motion.li>
+            </motion.ul>
           </nav>
 
           <div className={s.burger_nav}>
@@ -48,7 +78,7 @@ const Header = () => {
 
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

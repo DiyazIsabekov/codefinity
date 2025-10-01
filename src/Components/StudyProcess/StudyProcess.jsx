@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './StudyProcess.module.scss'
 import logo from '../../assets/images/red8.png'
+import { motion } from "framer-motion";
 
 
 
@@ -31,28 +32,79 @@ const infoData = [
     }
 ]
 
+const itemVariants = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: 0.5 } },
+};
 
 const StudyProcess = () => {
+
+
     return (
 
-        <section className={s.study}>
+        <motion.section
+            variants={{
+                hidden: { opacity: 0 },
+                show: { opacity: 1, transition: { duration: 0.5, staggerChildren: 0.25 } },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+
+            className={s.study}>
             <div className={s.full_info}>
-                <h2 className={s.heading}>Как мы учим</h2>
-                <h4>Фишки обучения на курсе</h4>
-                <div className={s.cards}>
+                <motion.h2
+                    variants={{
+                        hidden: { opacity: 0, x: -40 },
+                        show: { opacity: 1, x: 0, transition: { duration: 0.7 } }
+                    }}
+
+                    className={s.heading}>Как мы учим</motion.h2>
+                <motion.h4
+                    variants={{
+                        hidden: { opacity: 0, x: -40 },
+                        show: { opacity: 1, x: 0, transition: { duration: 0.7 } }
+                    }}>Фишки обучения на курсе</motion.h4>
+                <motion.div
+                    variants={{
+                        hidden: { opacity: 0 },
+                        show: { opacity: 1, transition: { duration: 0.5, staggerChildren: 0.25 } },
+                    }}
+
+                    className={s.cards}
+                >
                     {infoData.map((el) => (
-                        <div key={el.title} className={s.card}>
+                        <motion.div
+                            key={el.title}
+                            variants={itemVariants}
+                            className={s.card}
+                        >
                             <h3 className={s.cardTitle}>{el.title}</h3>
                             <p className={s.cardText}>{el.text}</p>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
-                <div className={s.imageWrapper}>
-                    <img src={logo} className={s.infinity} alt="infinity" />
-                </div>
+
+                <motion.div
+                    variants={{
+                        hidden: { opacity: 0, },
+                        show: { opacity: 1, transition: { duration: 1 } }
+                    }}
+
+                    className={s.imageWrapper}>
+
+                    <motion.img
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1.5 }}
+                        src={logo}
+                        className={s.infinity}
+                        alt="infinity" />
+                </motion.div>
             </div>
-        </section>
+
+        </motion.section>
 
     );
 };
