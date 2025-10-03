@@ -1,44 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+@import "../../SCSS/mixins";
 
 .course_card {
   flex: 1 1 47%;
   height: 462px;
   border-radius: 35px;
   padding: 55px 55px 33px;
-  // margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 
   .logo_wrap {
     background-color: #fff;
-    width: 20%;
-    height: 116px;
+    width: 110px;
+    height: 30%;
     border-radius: 15px;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
     img {
-      width: 70%;
-      height: 70%;
+      width: 90%;
+      height: 90%;
     }
   }
 
   h3 {
     font-family: "Onest", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 44px;
     text-transform: capitalize;
     color: #fff;
-    width: 71%;
-    margin-top: 22px;
+    width: 100%;
+
+    // margin-top: 10px;
   }
 
   &:nth-of-type(5) h3 {
     width: 62%;
   }
 
+  &:nth-of-type(1) h3 {
+    width: 62%;
+  }
+
+  &:nth-of-type(4) h3 {
+    width: 62%;
+  }
+
+
+
   button {
     width: 100%;
     height: 85px;
+    flex-shrink: 0;
+
     border-radius: 52px;
     border: 2px solid #fff;
     background-color: transparent;
@@ -48,11 +66,100 @@
     font-weight: 300;
     color: #fff;
     transition: 0.2s;
-    margin-top: 34px;
+    // margin-top: auto;
 
     &:hover {
       background-color: #fff;
       color: inherit;
     }
+  }
+
+  //1440
+  @include LaptopL {
+
+    padding: 50px 45px 33px;
+
+    .logo_wrap {
+      width: 100px;
+      height: 25%;
+    }
+
+    h3 {
+      font-size: 40px;
+
+    }
+
+  }
+
+  //1280
+  @include oldMonitor {
+    padding: 45px 35px 33px;
+    height: 400px;
+
+
+    .logo_wrap {
+      width: 90px;
+      height: 27%;
+    }
+
+    h3 {
+      font-size: 36px;
+    }
+
+    button {
+      height: 75px;
+      font-size: 23px;
+    }
+  }
+
+  //992
+  @include tablet {
+
+    padding: 30px 25px 23px;
+    height: 362px;
+
+    .logo_wrap {
+      width: 90px;
+      height: 27%;
+    }
+
+    h3 {
+      font-size: 32px;
+
+    }
+
+    button {
+      height: 65px;
+      font-size: 22px;
+    }
+  }
+
+  //768
+  @include mobileL {
+    align-items: center;
+    height: 300px;
+
+    .logo_wrap {
+      width: 97px;
+      height: 35%;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 28px;
+    }
+  }
+
+  @include mobileM {
+
+    h3 {
+      font-size: 24px;
+    }
+
+    button {
+      height: 55px;
+      font-size: 20px;
+    }
+
   }
 }

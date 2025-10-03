@@ -26,6 +26,7 @@ const cardsReview = [
 const Reviews = () => {
     return (
         <section>
+            <a name="reviews"></a>
             <h2>Отзывы наших студентов</h2>
             <div className={s.cards_wrapper}>
                 {cardsReview.map((el, i) => (

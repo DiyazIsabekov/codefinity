@@ -20,7 +20,6 @@ const Home = () => {
         <Partners />
         <Teachers />
         <Consultation />
-        <StudyProcess />
         <Reviews />
       </Container>
     </div>
