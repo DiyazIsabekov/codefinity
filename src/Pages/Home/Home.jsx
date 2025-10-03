@@ -21,7 +21,6 @@ const Home = () => {
         <Teachers />
         <Consultation />
         <Reviews />
-        <Accordion />
       </Container>
     </div>
   );
