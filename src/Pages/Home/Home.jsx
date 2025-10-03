@@ -9,7 +9,6 @@ import Consultation from "../../Components/Consultation/Consultation";
 import Reviews from "../../Components/Reviews/Reviews";
 import Container from "../../Components/Container/Container";
 import Accordion from '../../Components/Accordion/Accordion'
-import StudyProcess from './../../Components/StudyProcess/StudyProcess';
 
 const Home = () => {
   return (
@@ -21,7 +20,6 @@ const Home = () => {
         <Partners />
         <Teachers />
         <Consultation />
-        <StudyProcess />
         <Reviews />
         <Accordion />
       </Container>

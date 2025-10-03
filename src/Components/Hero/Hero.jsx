@@ -104,6 +104,7 @@ const Hero = () => {
                         <motion.img
                             src={pic1}
                             alt="infinity"
+                            className={s.infinity}
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1.5 }}
