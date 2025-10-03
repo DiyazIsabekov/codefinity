@@ -49,7 +49,7 @@ const Header = () => {
               <motion.li variants={itemVariants}><a href="#courses" className={s.menu_items}>КУРСЫ</a></motion.li>
               <motion.li variants={itemVariants}><a href="#projects" className={s.menu_items}>ПРОЕКТЫ СТУДЕНТОВ</a></motion.li>
               <motion.li variants={itemVariants}><a href="#partners" className={s.menu_items}>ПАРТНЕРЫ</a></motion.li>
-              <motion.li variants={itemVariants}><a href="" className={s.menu_items}>ОТЗЫВЫ</a></motion.li>
+              <motion.li variants={itemVariants}><a href="#reviews" className={s.menu_items}>ОТЗЫВЫ</a></motion.li>
               <motion.li variants={itemVariants}><a href="#teachers" className={s.menu_items}>ПРЕПОДАВАТЕЛИ</a></motion.li>
             </motion.ul>
           </nav>
