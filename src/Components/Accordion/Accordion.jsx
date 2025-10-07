@@ -1,27 +1,54 @@
 import React, {useState} from 'react';
 import s from './Accordion.module.scss'
 import Accordion from '@mui/material/Accordion';
-// import styled from '@emotion/styled';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-// import Grid  from '@mui/material';
+import { motion } from "framer-motion";
 
 
 export default function ControlledAccordions({data, colors}) {
-  console.log(colors)
-  const [expandedId, setExpandedId] = React.useState(false);
+  
+  const [expandedId, setExpandedId] = useState(false);
 
   const handleChange = (id) => (event, isExpanded) => {
     setExpandedId(isExpanded ? id : false);
   };
 
+  const containerVariants = {
+    hidden: {},
+      visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, ease: "linear" },
+    },
+  };
+
   return (
-    <div>
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '15px',
+      }}
+      >
       {data.map((el, i) => (
+        <motion.div key={i} variants={itemVariants}>
         <Accordion
           className="accordion"
           key={i}
@@ -38,14 +65,14 @@ export default function ControlledAccordions({data, colors}) {
           }}
          sx={{ border: colors.border, 
           borderRadius: '16px', 
-          overflow: 'hidden', boxShadow: 'none', 
+          overflow: 'hidden',
+          boxShadow: 'none', 
           '&:before': 
           { display: 'none' }, 
-          marginBottom: '20px', 
           '&.MuiPaper-root': 
             { borderRadius: '16px', }, 
+          // marginBottom: expandedId === el.id ? '30px' : '15px',
         }} 
-
         >
         <AccordionSummary 
           expandIcon={
@@ -65,7 +92,12 @@ export default function ControlledAccordions({data, colors}) {
                  height="44"
                  rx="13"
                     fill={expandedId === el.id ? colors.expandedIcon : 'white'}
-                    stroke={expandedId === el.id ? 'transparent' : colors.borderIcon}
+                    stroke={
+                      window.innerWidth < 992
+                      ? 'white'
+                      : expandedId === el.id ?
+                      'transparent'
+                      : colors.borderIcon}
                  />
                 <path d="M33 29L24.5 15L16 29L24.5 29L33 29Z"
                    fill={expandedId === el.id ? 'white' : colors.arrow}
@@ -101,7 +133,7 @@ export default function ControlledAccordions({data, colors}) {
         >
           
       <Box className={s.main_module}>
-          <Box 
+        <Box 
           className={s.module_left}
           sx = {{
             background: colors.leftBg,
@@ -161,7 +193,8 @@ export default function ControlledAccordions({data, colors}) {
             </Box>
           </AccordionDetails>
         </Accordion>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }

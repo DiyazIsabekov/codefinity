@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './Partners.module.scss'
+import { motion } from "framer-motion";
 import rsk from '../../assets/images/RSK_Bank_Logo.png'
 import mbank from '../../assets/images/mbank_logo.png'
 import kicb from '../../assets/images/kicb_logo.png'
@@ -13,25 +14,47 @@ const Partners = () => {
   return (
     <div className={s.partnersMain}>
       <a name="partners"></a>
-      <h2>Партнеры</h2>
-      <div className={s.partners_wrapper}>
-        <div className={s.column}>
-          <img src={rsk} alt="logo" width={218} height={73} />
-          <img src={mbank} alt="logo" width={224} height={54} />
-          <img src={kicb} alt="logo" width={190} height={77} />
-        </div>
-        <div className={s.column}>
-          <img src={bakai} alt="logo" width={363} height={76} />
-          <img src={bankazii} alt="logo" width={284} height={77} />
-          <img src={finca} alt="logo" width={318} height={76} />
-        </div>
-        <div className={s.column}>
-          <img src={umai} alt="logo" width={178} height={67} />
-          <img src={ipc} alt="logo" width={197} height={66} />
-        </div>
+      <motion.h2 className={s.partners_title}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0 },
+          }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut",
+          }}
+      >Партнеры</motion.h2>
+      <motion.div className={s.partners_wrapper}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        hidden: {},
+        visible: {
+          transition: {
+            staggerChildren: 0.15,
+          },
+        },
+      }}
+      >
+        {[rsk, bakai, umai, mbank, bankazii, ipc, kicb, finca].map((logo, i) => (
+          <motion.img 
+          key={i} src={logo} alt="logo"
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut",
+          }}
+          />
+        ))}
 
-
-      </div>
+      </motion.div>
     </div>
   );
 };
