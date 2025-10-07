@@ -1,142 +1,123 @@
 @import "../../SCSS/mixins";
 
 .footer_block {
-    .logo_wrapper {
+  .logo_wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    margin: 90px 0;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: red;
+      width: 100%;
+      height: 1px;
+      top: 0;
+      left: 0;
+    }
+
+    .logo {
+      width: 250px;
+      height: auto;
+      display: flex;
+    }
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+
+    .footer_navigation {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px auto;
+
+      h3 {
+        color: black;
+        font-size: 22.75px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      .courses {
         display: flex;
-        justify-content: center;
-        padding-top: 100px;
-        margin: 90px 0;
-        position: relative;
+        flex-direction: column;
+        list-style: none;
+        // margin: 0;
+        // padding: 0;
 
-        &::before {
-            position: absolute;
-            content: '';
-            background-color: red;
-            width: 100%;
-            height: 1px;
-            top: 0;
-            left: 0;
+        .courses_items {
+          text-decoration: none;
+          color: black;
+          font-family: "Onest", sans-serif;
+          font-size: 22.75px;
+          font-weight: 400;
         }
+      }
+    }
 
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: end;
+      gap: 10px;
 
-        .logo {
-            width: 250px;
-            height: auto;
-            display: flex;
+      a {
+        color: black;
+        font-family: "Onest", sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        text-decoration: none;
+      }
 
-        }
+      .logos {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
 
+  @include mobileL {
+    .logo_wrapper {
+      margin: 40px 0;
+      padding-top: 60px;
+
+      .logo {
+        width: 210px;
+      }
     }
 
     .container {
-        width: 80%;
-        margin: 0 auto;
+      .footer_navigation {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 20px;
 
-        .footer_navigation {
-            display: flex;
-            justify-content: space-between;
-            margin: 40px auto;
+        h3 {
+          margin-bottom: 10px;
+        }
 
-            h3 {
-                color: black;
-                font-size: 22.75px;
-                font-weight: 700;
-                margin-bottom: 20px;
-            }
-
-            nav {
-                width: 100%;
-            }
-
-            .courses {
-                display: flex;
-                flex-direction: column;
-                list-style: none;
-                // margin: 0;
-                // padding: 0;
-
-
-                .courses_items {
-                    text-decoration: none;
-                    color: black;
-                    font-family: "Onest", sans-serif;
-                    font-size: 22.75px;
-                    font-weight: 400;
-                }
-
-            }
-
-
-
+        .courses {
+          gap: 8px;
         }
 
         .contacts {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: end;
-            gap: 10px;
-
-            a {
-                color: black;
-                font-family: "Onest", sans-serif;
-                font-weight: 400;
-                font-size: 20px;
-                text-decoration: none;
-            }
-
-            .logos {
-                display: flex;
-                gap: 10px;
-            }
-
-
+          align-items: center;
         }
-
-
+      }
     }
+  }
 
-    @include mobileL {
+  // @include mobileM {}
 
-        .logo_wrapper {
-            margin: 40px 0;
-            padding-top: 60px;
-
-            .logo {
-                width: 210px;
-            }
-        }
-
-        .container {
-            .footer_navigation {
-
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-                gap: 20px;
-
-                h3 {
-                    margin-bottom: 10px;
-                }
-
-                .courses {
-                    gap: 8px;
-                }
-
-                .contacts {
-
-                    align-items: center;
-
-
-                }
-            }
-
-        }
-    }
-
-
-    // @include mobileM {}
-
-    // @include mobileS {}
+  // @include mobileS {}
 }
