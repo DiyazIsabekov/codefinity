@@ -205,6 +205,12 @@
         border: none;
         border: 1px solid #FFFFFF;
         cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            color: #000;
+            background-color: #FFF;
+        }
 
         @include minMobileL {
             font-size: px-to-em(18);
