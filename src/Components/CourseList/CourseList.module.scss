@@ -1,36 +1,131 @@
+@import "../../SCSS/mixins";
+
 .card_wrap {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+
+  @include oldMonitor {
+    gap: 32px;
+  }
+
+  //992
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  //769
+  @include mobileL {
+    grid-template-columns: 1fr;
+  }
+
+
 }
 
-h2 {
-  font-family: "Onest", sans-serif;
-  font-weight: 700;
-  font-style: bold;
-  font-size: 48px;
-  vertical-align: middle;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #000;
+.courses {
+  h2 {
+    font-family: "Onest", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 48px;
+    vertical-align: middle;
+    text-align: center;
+    margin: 40px;
+    color: #000;
+
+    @include oldMonitor {
+      font-size: 43px;
+    }
+
+    //992
+    @include tablet {
+      font-size: 40px;
+      margin: 30px;
+    }
+
+    @include mobileL {
+      font-size: 32px;
+      margin: 20px;
+    }
+
+    @include mobileM {
+      font-size: 26px;
+
+    }
+  }
 }
+
 
 .btn {
   display: flex;
   justify-content: center;
   margin-top: 69px;
+
   .btn_request {
     border-radius: 35px;
     cursor: pointer;
     border: none;
-    background-color: #d71f2b;
+
+    background: linear-gradient(270deg, #a91525, #f46e08, #a91525);
+    background-size: 400% 400%;
+    transition: background-position 0.6s ease-in-out;
+
     font-family: "Onest", sans-serif;
     font-weight: 300;
     font-size: 26px;
     padding: 13px 30px;
     color: #ffffff;
-    width: 26%;
-    height: 60px;
+    width: 43%;
+    // height: 60px;
+
+    &:hover {
+      background-position: 100% 0;
+    }
+
+  }
+
+  @include LaptopL {
+    .btn_request {
+      font-size: 24px;
+    }
+  }
+
+  @include oldMonitor {
+    .btn_request {
+      width: 48%;
+      font-size: 22px;
+      padding: 13px 18px;
+    }
+  }
+
+  @include tablet {
+    margin-top: 42px;
+
+    .btn_request {
+      font-size: 20px;
+      padding: 11px 5px;
+      width: 51%;
+    }
+  }
+
+  @include mobileL {
+    margin-top: 32px;
+
+    .btn_request {
+      font-size: 17px;
+      padding: 11px 10px;
+      width: 51%;
+    }
+  }
+
+  @include mobileS {
+    margin-top: 23px;
+
+    .btn_request {
+      font-size: 12px;
+      padding: 11px 10px;
+      width: 51%;
+    }
   }
 }

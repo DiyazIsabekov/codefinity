@@ -48,31 +48,49 @@ const cardData = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.25,
+    },
+  },
+};
+
 const CourseList = () => {
+
   return (
-    <motion.section
-      variants={{
-        hidden: { opacity: 0 },
-        show: {
-          opacity: 1,
-          transition: {
-            staggerChildren: 0.25,
-          },
-        },
-      }}
+    <motion.section className={s.courses}
+
+      variants={containerVariants}
       initial="hidden"
-      animate="show"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.3 }}
     >
       <a name="courses"></a>
-      <h2>Выберите Свой Курс</h2>
+      <motion.h2
+        variants={{
+          hidden: { opacity: 0, x: -40 },
+          show: { opacity: 1, x: 0, transition: { duration: 0.7 } }
+        }}
+      >Выберите Свой Курс</motion.h2>
       <div className={s.card_wrap}>
         {cardData.map((el, i) => (
           <CourseCard key={i} {...el} />
         ))}
       </div>
-      <div className={s.btn}>
-        <button className={s.btn_request}>ОСТАВИТЬ ЗАЯВКУ</button>
-      </div>
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, x: -30 },
+          show: { opacity: 1, x: 0, transition: { duration: 1 } }
+        }}
+        whileTap={{ scale: 1 }}
+        whileHover={{ scale: 1.1 }}
+
+        className={s.btn}>
+        <button className={s.btn_request}>ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+      </motion.div>
     </motion.section>
   );
 };

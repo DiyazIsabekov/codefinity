@@ -5,7 +5,33 @@
 
 .teachersSection {
     h2 {
+        font-family: "Onest", sans-serif;
+        font-weight: 700;
+        font-style: bold;
+        font-size: 48px;
+        vertical-align: middle;
+        text-align: center;
         margin: 40px;
+        color: #000;
+
+        @include oldMonitor {
+            font-size: 42px;
+        }
+
+        @include tablet {
+            font-size: 40px;
+            margin: 35px;
+        }
+
+        @include mobileL {
+            font-size: 28px;
+            margin: 20px;
+        }
+
+        @include mobileM {
+            font-size: 24px;
+
+        }
     }
 
     .cardWrapper {
@@ -49,9 +75,6 @@
 
     //992
     @include tablet {
-        h2 {
-            font-size: 40px;
-        }
 
         .cardWrapper {
             .card {
@@ -74,9 +97,6 @@
 
     //767
     @include mobileL {
-        h2 {
-            font-size: 37px;
-        }
 
         .cardWrapper {
             flex-direction: column;
@@ -91,9 +111,5 @@
     }
 
     //500
-    @include mobileM {
-        h2 {
-            font-size: 31px;
-        }
-    }
+    // @include mobileM {  }
 }
