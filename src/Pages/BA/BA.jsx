@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./BA.module.scss";
 import HeroDetails from "../../Components/HeroDetails/HeroDetails";
 import Container from "../../Components/Container/Container";
+import Accent from "../../Components/AccentSection/Accent";
 import Accordion from "../../Components/Accordion/Accordion";
 
 const BA_data = [
@@ -95,6 +96,7 @@ const BA = () => {
   return (
     <div className={styles["business-analyst"]}>
       <HeroDetails />
+      <Accent />
       <Container className={styles['business-analyst__container']}>
         <div className={styles.gap}>sections</div>
         <Accordion data={BA_data} colors={BA_Style}/>
