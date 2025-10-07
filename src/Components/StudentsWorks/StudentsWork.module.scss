@@ -1,33 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "../../SCSS/mixins";
 
+.students_work {
+  h2 {
+    font-family: "Onest", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 48px;
+    vertical-align: middle;
+    text-align: center;
+    margin: 40px;
+    color: #000;
 
-.students_work_title{
-    margin-top: 65px;
-}
+    @include oldMonitor {
+      font-size: 42px;
+    }
 
-.wrapper_students_work_cards{
-    display: flex;
-    justify-content: space-between;
+    @include tablet {
+      font-size: 40px;
+      margin: 35px;
+    }
 
-    .card_sw {
-     width: 30%;
-     display: flex;
-     flex-direction: column;
-     
+    @include mobileL {
+      font-size: 28px;
+      margin: 20px;
+    }
 
-     .sw_picture{
-        height: 384px;
-        border-radius: 40px;        
-      }
-
-      .card_text{
-         font-family: Inter, sans-serif;
-         font-size: 22px;
-         font-weight: 700;
-         font-style: bold;
-         color: #000000;
-         margin-top: 15px;
-      }
+    @include mobileM {
+      font-size: 24px;
 
     }
+  }
+}
+
+.students_work_title {
+  margin-top: 65px;
+}
+
+.wrapper_students_work_cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+
+  @media screen and (max-width: 1569px) {
+    justify-content: center;
+    gap: 3.5%;
+
+  }
+
+  @include LaptopL {
+    gap: 3.5%;
+  }
+
+  .card_sw {
+
+    flex: 0 1 30%;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 1569px) {
+      flex: 0 1 48%;
+      justify-content: center;
+
+    }
+
+
+    @include tablet {
+      flex: 0 1 85%;
+    }
+
+
+    @include mobileM {
+      flex: 0 1 100%;
+
+    }
+
+
+    .sw_picture {
+      width: 100%;
+      border-radius: 40px;
+    }
+
+    .card_text {
+      font-family: Inter, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      font-style: bold;
+      color: #000000;
+      margin: 13px;
+
+      @include oldMonitor {
+        font-size: 19px;
+      }
+
+      @include mobileL {
+        font-size: 17px;
+      }
+    }
+
+
+
+  }
 }

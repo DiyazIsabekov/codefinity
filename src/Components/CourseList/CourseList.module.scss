@@ -34,6 +34,10 @@
     margin: 40px;
     color: #000;
 
+    @include oldMonitor {
+      font-size: 43px;
+    }
+
     //992
     @include tablet {
       font-size: 40px;

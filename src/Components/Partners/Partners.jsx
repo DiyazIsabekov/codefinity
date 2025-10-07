@@ -11,7 +11,7 @@ import ipc from '../../assets/images/ipc_logo.png'
 
 const Partners = () => {
   return (
-    <div>
+    <div className={s.partnersMain}>
       <a name="partners"></a>
       <h2>Партнеры</h2>
       <div className={s.partners_wrapper}>
