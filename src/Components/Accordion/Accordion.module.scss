@@ -1,7 +1,17 @@
+@import '../../SCSS/mixins';
+
 .main_module {
   display: flex;
   width: 100%;
   gap: 30px;
+
+
+  
+ @include tablet{
+    flex-direction: column;
+    gap: 0;
+    
+  } 
 
   .module_left {
     display: flex;
@@ -9,6 +19,18 @@
     flex: 0 0 24%;
     font-family: Inter, sans-serif;
     color: #ffffff;
+
+    @include LaptopL{
+      flex: 0 0 33%;
+    }
+
+    @include oldMonitor{
+      flex: 0 0 33%;
+    }
+
+    @include tablet{
+    flex-direction: column;
+  } 
 
        .left_title {
             font-size: 24px;
@@ -30,19 +52,34 @@
   .module_right {
     display: flex;
     flex-direction: column;
-    flex: 0 1 30%;
+    flex: 0 1 28%;
     font-family: Inter, sans-serif;
     color: #000000;
 
+    @include tablet{
+    flex-direction: column;
+  } 
+    
     .right_title {
       font-weight: 700;
       font-style: bold;
       font-size: 20px;
       margin: 20px 0 30px 0;
+
+      @include tablet{
+      display: none;
+  }
+
     }
 
     .right_text {
+      display: flex;
       margin-bottom: 20px;
+
+      @include tablet{
+      padding: 15px;
+           
+  }
 
       .bullits_wrapper {
         display: flex;
@@ -61,4 +98,5 @@
       }
     }
   }
+
 }

@@ -1,4 +1,10 @@
+@import '../../SCSS/mixins';
+
 .container {
     width: 80%;
     margin: 0 auto;
+
+    @include tablet{
+        width: 95%;
+    }
 }
