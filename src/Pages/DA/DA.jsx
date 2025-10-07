@@ -2,6 +2,7 @@ import React from "react";
 import styles from './DA.module.scss';
 import HeroDetails from "../../Components/HeroDetails/HeroDetails";
 import Container from "../../Components/Container/Container";
+import Accent from "../../Components/AccentSection/Accent";
 import Accordion from "../../Components/Accordion/Accordion";
 
 const DA_Data = [
@@ -95,6 +96,7 @@ const DA = () => {
   return (
     <div className={styles['data-analytics']}>
       <HeroDetails />
+      <Accent />
       <Container className={styles['data-analytics__container']}>
         <div className={styles.gap}>sections</div>
         <Accordion data={DA_Data} colors={DA_Style}/>

@@ -2,6 +2,7 @@ import React from "react";
 import styles from './Flutter.module.scss';
 import HeroDetails from "../../Components/HeroDetails/HeroDetails";
 import Container from "../../Components/Container/Container";
+import Accent from "../../Components/AccentSection/Accent";
 import Accordion from '../../Components/Accordion/Accordion'
 
 const FlutterData = [
@@ -94,13 +95,11 @@ const FlutterStyle =
 const Flutter = () => {
   return <div className={styles['flutter']}>
     <HeroDetails />
+    <Accent />
     <Container className={styles['flutter__container']}>
       <div className={styles.gap}>sections</div>
        <Accordion data={FlutterData} colors={FlutterStyle}/>
     </Container>
-     
-    
-    
   </div>;
 };
 

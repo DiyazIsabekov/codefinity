@@ -12,7 +12,7 @@ import ipc from '../../assets/images/ipc_logo.png'
 
 const Partners = () => {
   return (
-    <div>
+    <div className={s.partnersMain}>
       <a name="partners"></a>
       <motion.h2 className={s.partners_title}
           initial="hidden"
