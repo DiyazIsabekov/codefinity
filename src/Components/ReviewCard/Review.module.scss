@@ -1,3 +1,6 @@
+@import '../../SCSS/mixins';
+
+
 .review_card {
     background-color: #4169E8E5;
     width: 30%;
@@ -12,20 +15,24 @@
 
     .name {
         font-family: "Onest", sans-serif;
-        font-family: 700;
+        font-weight: 700;
         font-size: 23px;
         color: #fff;
-        margin: 32px 0 0 33px;
+        margin: 32px 0 0 40px;
     }
 
-    .review_text {
-        font-family: "Onest", sans-serif;
-        font-weight: 250;
-        font-size: 17px;
-        color: #fff;
-        text-align: center;
-        width: 84%;
-        margin-top: 23px;
-        margin-left: 32px;
+    .review_text_wrap {
+        display: flex;
+        justify-content: center;
+
+        .review_text {
+            font-family: "Onest", sans-serif;
+            font-weight: 250;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            width: 85%;
+            margin-top: 23px;
+        }
     }
 }
