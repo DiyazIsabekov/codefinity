@@ -83,7 +83,7 @@ const devopsData = [
   },
 ];
 
-const devopsStyle = 
+const devopsStyle =
 {
   border: "1px solid #2CA2FF",
   leftBg: '#2CA2FF',
@@ -96,10 +96,9 @@ const DevOps = () => {
   return (
     <div className={styles['dev-ops']}>
       <HeroDetails />
-      <Accent />
       <Container className={styles['dev-ops__container']}>
-        <div className={styles.gap}>sections</div>
-        <Accordion data={devopsData} colors={devopsStyle}/>
+        <Accent />
+        <Accordion data={devopsData} colors={devopsStyle} />
       </Container>
     </div>
   )
