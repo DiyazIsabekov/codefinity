@@ -1,5 +1,24 @@
+@import '../../SCSS/mixins';
+
+h2 {
+    font-family: "Onest", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 48px;
+    text-align: center;
+    margin: 40px 0;
+    color: #000;
+}
+
 .cards_wrapper {
     display: flex;
     justify-content: space-between;
+    // flex-wrap: wrap;
+}
 
+@include mobileM {
+    .cards_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
 }

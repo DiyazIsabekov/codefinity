@@ -8,7 +8,9 @@ const Review = ({ image, title, text }) => {
                 <img src={image} alt="" />
             </div>
             <h3 className={s.name}>{title}</h3>
-            <p className={s.review_text}>{text}</p>
+            <div className={s.review_text_wrap}>
+                <p className={s.review_text}>{text}</p>
+            </div>
         </div>
     );
 };
