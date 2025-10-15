@@ -3,6 +3,9 @@ import styles from './JS.module.scss';
 import HeroDetails from "../../Components/HeroDetails/HeroDetails";
 import Container from "../../Components/Container/Container";
 import Accordion from '../../Components/Accordion/Accordion'
+import Accent from "../../Components/AccentSection/Accent";
+import StudyProcess from "../../Components/StudyProcess/StudyProcess";
+import Teachers from "../../Components/Teachers/Teachers";
 
 const JS_Data = [
   {
@@ -65,8 +68,8 @@ const JS_Data = [
     bullit8: "Практика: получение данных с публичного API",
     bullit9: "+мини-проект: погодное приложение",
   },
-   {
-        id: 5,
+  {
+    id: 5,
     title: "Soft skills",
     theme_title: "Темы:",
     text: "Чтобы стать успешным разработчиком, важно не только писать код, но и уметь решать проблемы, работать в команде и грамотно коммуницировать.",
@@ -80,7 +83,7 @@ const JS_Data = [
     bullit8: "Карьера Junior-разработчика: чего ожидать",
     bullit9: "+мини-дискуссия: как пройти первое собеседование",
   },
-   {
+  {
     id: 6,
     title: "Hard skills",
     theme_title: "Темы:",
@@ -97,7 +100,7 @@ const JS_Data = [
   },
 ];
 
-const JS_Style = 
+const JS_Style =
 {
   border: "1px solid #F5B762",
   leftBg: '#F5B762',
@@ -110,8 +113,10 @@ const JS = () => {
   return <div className={styles['javascript']}>
     <HeroDetails />
     <Container className={styles['javascript__container']}>
-      <div className={styles.gap}>sections</div>
-      <Accordion data={JS_Data} colors={JS_Style}/>
+      <Accordion data={JS_Data} colors={JS_Style} />
+      <StudyProcess />
+      <Accent />
+      <Teachers />
     </Container>
   </div>;
 };

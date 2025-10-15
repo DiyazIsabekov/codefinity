@@ -4,6 +4,8 @@ import HeroDetails from "../../Components/HeroDetails/HeroDetails";
 import Container from "../../Components/Container/Container";
 import Accent from "../../Components/AccentSection/Accent";
 import Accordion from "../../Components/Accordion/Accordion";
+import StudyProcess from "../../Components/StudyProcess/StudyProcess";
+import Teachers from "../../Components/Teachers/Teachers";
 
 const devopsData = [
   {
@@ -97,8 +99,10 @@ const DevOps = () => {
     <div className={styles['dev-ops']}>
       <HeroDetails />
       <Container className={styles['dev-ops__container']}>
-        <Accent />
         <Accordion data={devopsData} colors={devopsStyle} />
+        <StudyProcess />
+        <Accent />
+        <Teachers />
       </Container>
     </div>
   )

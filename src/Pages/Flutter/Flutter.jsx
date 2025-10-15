@@ -3,53 +3,55 @@ import styles from './Flutter.module.scss';
 import HeroDetails from "../../Components/HeroDetails/HeroDetails";
 import Container from "../../Components/Container/Container";
 import Accent from "../../Components/AccentSection/Accent";
-import Accordion from '../../Components/Accordion/Accordion'
+import Accordion from '../../Components/Accordion/Accordion';
+import StudyProcess from "../../Components/StudyProcess/StudyProcess";
+import Teachers from "../../Components/Teachers/Teachers";
 
 const FlutterData = [
   {
-  id: 1,
-  title: "Модуль 1",
-  theme_title: "Темы:",
-  text: "Начинаем путь Flutter-разработчика с настройки среды, инструментов и изучения языка программирования Dart. Осваиваем синтаксис, переменные, коллекции и основы объектно-ориентированного подхода.",
-  bullit1: "Настройка операционной системы (Windows, Linux, Mac)",
-  bullit2: "Среды разработки: Android Studio, VS Code, IntelliJ IDEA",
-  bullit3: "Инструменты: Git, Postman, Swagger, Terminal",
-  bullit4: "Установка и введение в Dart",
-  bullit5: "Типы данных, переменные, константы",
-  bullit6: "Условия и циклы (if, else, for, while)",
-  bullit7: "Функции и анонимные функции",
-  bullit8: "Объектно-ориентированное программирование (классы, наследование, интерфейсы)",
-  bullit9: "+1 практическая работа"
+    id: 1,
+    title: "Модуль 1",
+    theme_title: "Темы:",
+    text: "Начинаем путь Flutter-разработчика с настройки среды, инструментов и изучения языка программирования Dart. Осваиваем синтаксис, переменные, коллекции и основы объектно-ориентированного подхода.",
+    bullit1: "Настройка операционной системы (Windows, Linux, Mac)",
+    bullit2: "Среды разработки: Android Studio, VS Code, IntelliJ IDEA",
+    bullit3: "Инструменты: Git, Postman, Swagger, Terminal",
+    bullit4: "Установка и введение в Dart",
+    bullit5: "Типы данных, переменные, константы",
+    bullit6: "Условия и циклы (if, else, for, while)",
+    bullit7: "Функции и анонимные функции",
+    bullit8: "Объектно-ориентированное программирование (классы, наследование, интерфейсы)",
+    bullit9: "+1 практическая работа"
   },
   {
-  id: 2,
-  title: "Модуль 2",
-  theme_title: "Темы:",
-  text: "Осваиваем продвинутые возможности Dart и делаем первые шаги в Flutter. Учимся создавать архитектуру приложения, понимать структуру проекта и работать с основными виджетами.",
-  bullit1: "Конструкторы, ключевые слова this и static",
-  bullit2: "Абстрактные и интерфейсные классы",
-  bullit3: "Асинхронное программирование (async/await, Future, Stream)",
-  bullit4: "Коллекции и обобщения в Dart",
-  bullit5: "Установка Flutter SDK",
-  bullit6: "Архитектура Flutter-приложения",
-  bullit7: "Первое приложение Flutter",
-  bullit8: "Практика: мини-проект на Dart и Flutter",
-  bullit9: "+1 практическая работа"
+    id: 2,
+    title: "Модуль 2",
+    theme_title: "Темы:",
+    text: "Осваиваем продвинутые возможности Dart и делаем первые шаги в Flutter. Учимся создавать архитектуру приложения, понимать структуру проекта и работать с основными виджетами.",
+    bullit1: "Конструкторы, ключевые слова this и static",
+    bullit2: "Абстрактные и интерфейсные классы",
+    bullit3: "Асинхронное программирование (async/await, Future, Stream)",
+    bullit4: "Коллекции и обобщения в Dart",
+    bullit5: "Установка Flutter SDK",
+    bullit6: "Архитектура Flutter-приложения",
+    bullit7: "Первое приложение Flutter",
+    bullit8: "Практика: мини-проект на Dart и Flutter",
+    bullit9: "+1 практическая работа"
   },
   {
-  id: 3,
-  title: "Модуль 3",
-  theme_title: "Темы:",
-  text: "Изучаем Flutter в действии: создаём интерфейсы, используем виджеты, навигацию и запросы к API. Учимся строить архитектуру приложений и управлять состоянием.",
-  bullit1: "Stateful и Stateless виджеты",
-  bullit2: "Layouts: Container, Row, Column, Stack, Scaffold",
-  bullit3: "Элементы интерфейса: Text, TextField, Buttons, Images, Cards",
-  bullit4: "Навигация: Routes, Bottom Navigation, TabBar",
-  bullit5: "State Management и Bloc Architecture",
-  bullit6: "ListView, GridView и работа с данными",
-  bullit7: "HTTP-запросы: Get, Post, Put, Delete (Dio, Retrofit)",
-  bullit8: "Создание Flutter-приложения с backend на Java",
-  bullit9: "+1 практическая работа"
+    id: 3,
+    title: "Модуль 3",
+    theme_title: "Темы:",
+    text: "Изучаем Flutter в действии: создаём интерфейсы, используем виджеты, навигацию и запросы к API. Учимся строить архитектуру приложений и управлять состоянием.",
+    bullit1: "Stateful и Stateless виджеты",
+    bullit2: "Layouts: Container, Row, Column, Stack, Scaffold",
+    bullit3: "Элементы интерфейса: Text, TextField, Buttons, Images, Cards",
+    bullit4: "Навигация: Routes, Bottom Navigation, TabBar",
+    bullit5: "State Management и Bloc Architecture",
+    bullit6: "ListView, GridView и работа с данными",
+    bullit7: "HTTP-запросы: Get, Post, Put, Delete (Dio, Retrofit)",
+    bullit8: "Создание Flutter-приложения с backend на Java",
+    bullit9: "+1 практическая работа"
   },
   {
     id: 4,
@@ -80,11 +82,11 @@ const FlutterData = [
     bullit7: "Использование Dio, Retrofit и JSON",
     bullit8: "Разработка и тестирование итогового проекта",
     bullit9: "+1 итоговый проект"
-   
+
   },
 ];
 
-const FlutterStyle = 
+const FlutterStyle =
 {
   border: "1px solid #7CE529",
   leftBg: '#7CE529',
@@ -96,10 +98,11 @@ const FlutterStyle =
 const Flutter = () => {
   return <div className={styles['flutter']}>
     <HeroDetails />
-    <Accent />
     <Container className={styles['flutter__container']}>
-      <div className={styles.gap}>sections</div>
-       <Accordion data={FlutterData} colors={FlutterStyle}/>
+      <Accordion data={FlutterData} colors={FlutterStyle} />
+      <StudyProcess />
+      <Accent />
+      <Teachers />
     </Container>
   </div>;
 };

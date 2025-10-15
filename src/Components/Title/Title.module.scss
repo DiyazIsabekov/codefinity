@@ -1,0 +1,44 @@
+@import '../../SCSS/mixins';
+
+.section {
+    &__info {
+        @include minMobileL {
+            margin: 42px 0 64px;
+        }
+
+        @include mobileL {
+            margin: 30px 0;
+        }
+    }
+
+    &__title {
+        color: #000000;
+        font-weight: 700;
+
+        @include minMobileL {
+            font-size: 48px;
+            line-height: 48px;
+        }
+
+        @include mobileL {
+            font-size: 33px;
+            line-height: 100%;
+        }
+    }
+
+    &__text {
+        color: #000000;
+        font-weight: 400;
+        line-height: 100%;
+
+        @include minMobileL {
+            font-size: 24px;
+            margin-top: 45px;
+        }
+
+        @include mobileL {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    }
+}
