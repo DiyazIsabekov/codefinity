@@ -1,6 +1,9 @@
 @import '../../SCSS/mixins';
 
 .accordion {
+  position: relative;
+  z-index: 2;
+
   .main_module {
     display: flex;
     width: 100%;
