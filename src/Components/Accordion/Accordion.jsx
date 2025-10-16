@@ -85,6 +85,9 @@ export default function ControlledAccordions({ data, colors }) {
                   sx={{
                     width: 60,
                     height: 44,
+                    '&:hover': {
+                      backgroundColor: 'transparent',
+                    },
                   }}
                 >
                   <svg
