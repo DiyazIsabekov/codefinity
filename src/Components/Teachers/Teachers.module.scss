@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 @import "../../SCSS/mixins";
 
-
-
 .teachersSection {
+    @include minMobileL {
+        margin-top: 28px;
+    }
+
+    @include mobileL {
+        margin-top: 55px;
+    }
+
     h2 {
         font-family: "Onest", sans-serif;
         font-weight: 700;

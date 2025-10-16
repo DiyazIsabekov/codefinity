@@ -3,12 +3,11 @@ import logo from '../../assets/images/logo codefinity.png'
 import s from './Footer.module.scss'
 import inst from '../../assets/images/inst.png'
 import whats from '../../assets/images/whats.png'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 
 const Footer = () => {
-
   const itemVariants = {
     hidden: { opacity: 0, x: -20 },
     show: { opacity: 1, x: 0, transition: { duration: 0.3 } },
@@ -102,8 +101,12 @@ const Footer = () => {
             className={s.contacts}>
             <a href="tel:+996999775877 ">+996 999 775 877 </a>
             <div className={s.logos}>
-              <img src={whats} alt="whats" />
-              <img src={inst} alt="inst" />
+              <a href="https://wa.me/996999775877" target="_blank">
+                <img src={whats} alt="whats" />
+              </a>
+              <a href="https://www.instagram.com/codefinity.8?igsh=anBteGI5YXlyYWlr" target="_blank">
+                <img src={inst} alt="inst" />
+              </a>
             </div>
           </motion.div>
 

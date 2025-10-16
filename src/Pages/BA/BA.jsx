@@ -4,6 +4,8 @@ import HeroDetails from "../../Components/HeroDetails/HeroDetails";
 import Container from "../../Components/Container/Container";
 import Accent from "../../Components/AccentSection/Accent";
 import Accordion from "../../Components/Accordion/Accordion";
+import StudyProcess from '../../Components/StudyProcess/StudyProcess';
+import Teachers from "../../Components/Teachers/Teachers";
 
 const BA_data = [
   {
@@ -83,7 +85,7 @@ const BA_data = [
   },
 ];
 
-const BA_Style = 
+const BA_Style =
 {
   border: "1px solid #E44A59",
   leftBg: "linear-gradient(90deg, #000000 0%, #820512 100%)",
@@ -96,10 +98,11 @@ const BA = () => {
   return (
     <div className={styles["business-analyst"]}>
       <HeroDetails />
-      <Accent />
       <Container className={styles['business-analyst__container']}>
-        <div className={styles.gap}>sections</div>
-        <Accordion data={BA_data} colors={BA_Style}/>
+        <Accordion data={BA_data} colors={BA_Style} />
+        <StudyProcess />
+        <Accent />
+        <Teachers />
       </Container>
     </div>
   );
