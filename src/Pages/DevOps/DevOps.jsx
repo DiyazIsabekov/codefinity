@@ -100,7 +100,7 @@ const DevOps = () => {
       <HeroDetails />
       <Container className={styles['dev-ops__container']}>
         <Accordion data={devopsData} colors={devopsStyle} />
-        <StudyProcess />
+        {/* <StudyProcess /> */}
         <Accent />
         <Teachers />
       </Container>

@@ -16,7 +16,7 @@ const Accent = () => {
                             <div className={s['acent__top-block']}>
                                 <img src={practice} alt="practice" />
                                 <div className={s.text_wrap}>
-                                    <h4 className={s.accent_percent}>70%</h4>
+                                    <h4 className={s.accent_percent}>80%</h4>
                                     <p className={s.text}>практика</p>
                                 </div>
                             </div>
@@ -30,7 +30,7 @@ const Accent = () => {
                             <div className={s['acent__top-block']}>
                                 <img src={theory} alt="theory" />
                                 <div className={s.text_wrap}>
-                                    <h4 className={s.accent_percent}>10%</h4>
+                                    <h4 className={s.accent_percent}>20%</h4>
                                     <p className={s.text}>теория</p>
                                 </div>
                             </div>
