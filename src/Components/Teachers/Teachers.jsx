@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import s from './Teachers.module.scss';
 import pic1 from '../../assets/images/teacher1.png';
 import pic2 from '../../assets/images/teacher2.png';
@@ -43,35 +43,38 @@ const teachers = [
 
 const Teachers = () => {
     const sliderRef = useRef(null);
+    const [slidesToShow, setSlidesToShow] = useState(3);
+
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth;
+            if (width < 768) {
+                setSlidesToShow(1);
+            } else if (width < 1200) {
+                setSlidesToShow(2);
+            } else {
+                setSlidesToShow(3);
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const settings = {
         dots: true,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        arrows: true,
+        arrows: slidesToShow > 1,
         pauseOnHover: false,
         swipeToSlide: true,
         draggable: true,
-        touchMove: true,
-        responsive: [
-            {
-                breakpoint: 1200, // для планшетов
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 768, // для мобильных
-                settings: {
-                    slidesToShow: 1,
-                    arrows: false,
-                    dots: true,
-                },
-            },
-        ],
+        touchMove: true
     };
 
     return (
