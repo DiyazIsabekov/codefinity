@@ -47,7 +47,7 @@ const Teachers = () => {
     const settings = {
         dots: true,
         infinite: true,
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
@@ -56,6 +56,22 @@ const Teachers = () => {
         swipeToSlide: true,
         draggable: true,
         touchMove: true,
+        responsive: [
+            {
+                breakpoint: 1200, // для планшетов
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 768, // для мобильных
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                    dots: true,
+                },
+            },
+        ],
     };
 
     return (
