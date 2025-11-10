@@ -1,7 +1,6 @@
 @import "../../SCSS/mixins";
 
 .hero {
-  position: relative;
   overflow: visible;
   margin-bottom: 80px;
   height: 80vh;
@@ -10,7 +9,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 
     .title {
       width: 50%;
@@ -53,15 +51,13 @@
 
     .imageWrapper {
       position: absolute;
-      right: -185px;
-      top: 60%;
-      transform: translateY(-50%);
+      right: 0;
       z-index: -10;
 
       .infinity {
-        width: 90vh;
-        max-width: 800px;
+        width: 100vw;
         height: auto;
+        max-width: 800px;
       }
 
     }
@@ -100,10 +96,10 @@
       }
 
       .imageWrapper {
-        right: -138px;
+        right: -25px;
 
         .infinity {
-          width: 78vh;
+          width: 45vw;
         }
       }
     }
@@ -147,7 +143,7 @@
         right: -95px;
 
         .infinity {
-          width: 75vh;
+          width: 75vw;
         }
       }
     }
@@ -180,7 +176,7 @@
         right: -122px;
 
         .infinity {
-          width: 70vh;
+          width: 70vw;
         }
       }
     }
@@ -219,9 +215,10 @@
 
       .imageWrapper {
         right: -86px;
+        top: 100px;
 
         .infinity {
-          width: 60vh;
+          width: 60vw;
         }
       }
     }
@@ -257,10 +254,10 @@
 
       .imageWrapper {
         right: -65px;
-        top: 46%;
+        top: 50px;
 
         .infinity {
-          width: 48vh;
+          width: 60vw;
         }
       }
     }
@@ -298,7 +295,7 @@
         right: -50px;
 
         .infinity {
-          width: 40vh;
+          width: 70vw;
         }
       }
     }
@@ -337,9 +334,10 @@
 
       .imageWrapper {
         right: -42px;
+        top: 90px;
 
         .infinity {
-          width: 35vh;
+          width: 70vw;
         }
       }
     }

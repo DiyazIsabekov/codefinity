@@ -6,7 +6,7 @@ import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
-    <div>
+    <div class="app">
       <Header />
       <Main />
       <Footer />
